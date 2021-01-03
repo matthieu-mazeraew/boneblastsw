@@ -1,0 +1,13 @@
+@media only screen and (max-width:1550px)
+{
+   
+}
+@media only screen and (max-width:767px)
+{
+    .well{
+        margin-top: 400px;
+    }
+    .space{
+        margin-top: 0px;
+    }
+}
