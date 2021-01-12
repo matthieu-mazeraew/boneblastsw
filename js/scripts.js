@@ -32,6 +32,8 @@
     })
 
 	const toggles = document.querySelectorAll(".faq-toggle");
+	const toggles1 = document.querySelectorAll(".faq-title");
+	const toggles2 = document.querySelectorAll(".faq");
 
 	toggles.forEach((toggle) => {
 	  toggle.addEventListener("click", () => {
@@ -39,6 +41,17 @@
 	  });
 	});
 
+	toggles1.forEach((toggle1) => {
+	  toggle1.addEventListener("click", () => {
+	    toggle1.parentNode.classList.toggle("active");
+	  });
+	});
+
+	toggles2.forEach((toggle2) => {
+	  toggle2.addEventListener("click", () => {
+	    toggle2.parentNode.classList.toggle("active");
+	  });
+	});
 
     // hover in desktop mode
     function toggleDropdown (e) {
