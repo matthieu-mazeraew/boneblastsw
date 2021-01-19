@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="predict.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="queries.css">
   <link rel="stylesheet" href="test.css">
   <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
   <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
@@ -25,66 +26,6 @@
 
 </head>
 
-<body>
-    <!--<nav class="nav-menu" id="next">
-        <div class="wrapper">
-          <div class="logo">
-            <a href="#">
-                <img src="img/garvan-logo.svg" alt="">
-            </a>
-            </div>
-          <input type="radio" name="slider" id="menu-btn" onclick="bar()">
-          <input type="radio" name="slider" id="close-btn" onclick="close2()">
-          <div class="section-nav">
-            <ul class="nav-links" id="nav-link">
-                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                <li><a href="home.html" class="bg-color">Home</a></li>
-                <li>
-                  <a href="introduce.html" class="desktop-item">About</a>
-                  <input type="checkbox" id="showMega">
-                  <label for="showMega" class="mobile-item">About</label>
-                  <div class="mega-box">
-                    <div class="content">
-                      <div class="row">
-                        <img src= "img/research.svg" alt="">
-                      </div>
-                      <div class="row">
-                        <header>About iPredict</header>
-                        <ul class="mega-links">
-                          <li><a href="#">Who is for?</a></li>
-                          <li><a href="#">How iPredict works</a></li>
-                          <li><a href="#">Who build iPredict</a></li>
-                           <li><a href="#">Custom logo</a></li> -->
-                        <!--</ul>
-                      </div>
-                      <div class="row">
-                        <header>Technical</header>
-                        <ul class="mega-links">
-                          <li><a href="#">Development History</a></li>
-                          <li><a href="#">Publications</a></li>
-                          <li><a href="#">FAQs</a></li>
-                           <li><a href="#">Web Marketing</a></li> -->
-                        <!--</ul>
-                      </div>
-                      <div class="row">
-                        <header>Security services</header>
-                        <ul class="mega-links">
-                          <li><a href="#">Site Seal</a></li>
-                          <li><a href="#">VPS Hosting</a></li>
-                          <li><a href="#">Privacy Seal</a></li>
-                          <li><a href="#">Website design</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li><a href="index.html" class="bg-color">Predict</a></li>
-                <li><a href="contact.html" class="bg-color">Feedback</a></li>
-              </ul>
-          </div>
-          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-        </div>
-      </nav> -->
 <body data-spy="scroll" data-target=".fixed-top">
 </nav>
         <!-- Navigation -->
@@ -115,19 +56,18 @@
             </div> <!-- end of container -->
         </header> <!-- end of ex-header --> 
     </div>
+   
+
+
 
   <div class="tool-bone" id="tool-bone" style="height: auto;">
     <div class="bone-page-form" id="bone-page-form">
-      <!--<h4 class="mb-8 lg:max-w-3xl lg:mx-auto">
-      Fracture Risk Prognosis with osteoporosis
-      </h4>-->
-    
       <div class="panel-light">
         <div class="form-group">
           <div class="name-input">
             <div class="form-group">
               <h3 class="lb-input">Full Name (optional)</h3>
-              <input class="predict-input" type="text" style="width:12.75em;">
+              <input class="predict-input" id="name" type="text" style="width:12.75em;">
             </div>
           </div>
           <div class="name-input">
@@ -144,7 +84,7 @@
             Male
           </label>
           <input type="radio" id="wo" name="gender" value="wo">
-          <label class="radios_label" for="wo">
+          <label class="radios_label wo-lb" for="wo">
             Female
           </label>       
         </div>
@@ -350,162 +290,15 @@
             </div>
           </div>
       </div>
-      <h90 align="center">
       <button class="btn1" id="calculate-btn" onclick="Result()">
         Get your results
       </button>
-      </h90>
     </div>
-
-
     <div class="result-page" id="result-page">
-      <div id="first-chart" class="panel-light hidden">
-      
-      <div class="ratingChart-container">
-        <div class="inner-ratingChart">
-        <div class="estimates-row">
-            <div class="estimates-div">
-            <h3 class="estimates-h3 bpg-nino-bold">Estimates in next 5 years</h3>
-            <p class="estimates-p" >Normal Fracture & Hip Fracture</p>
-            </div>
-            <div>
-                <p class="good-p bpg-nino-normal">
-                    <svg id="circle" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                        <circle id="Ellipse_7" data-name="Ellipse 7" cx="5" cy="5" r="5" fill="#cbcbcb"/>
-                    </svg>
-                    <span>Risk %</span>
-                </p>
-            </div>
-        </div>
-        <!--
-                document.getElementById('num-percent').innerHTML = 'Without treatment:  ' + risk5_any + '%';
-                $(Best).val(risk5_any)
-
-
-      document.getElementById('num-percent2').innerHTML = 'With effective treatment:  ' + risk5_any_heal + '%';
-
-
-      document.getElementById('num-percent3').innerHTML = 'Without treatment:' + risk5_hip + '%';
-
-
-      document.getElementById('num-percent4').innerHTML = 'With effective treatment:  ' + risk5_hip_heal + '%';
-        -->
-
-        <div class=" estimates-charts-row  bpg-nino-normal">
-          <div class="rate-div ">
-            <p class="rate-p">Your 5-year risk of any fracture:</p>
-          </div>
-            <div class="chart-row">
-                <div class="rate-div ">
-                    <p class="rate-p">Normal</p>
-                </div>
-                <div class="oneline-div">
-                    <div class="inner-line-div">
-                    <div class="colorful-line-div "  id="Best">
-                        <br>
-                    </div>
-                    </div>
-                </div>
-                <div class="percent-div">
-                    <p class="percent-p">
-                      <span id="num-percentx1"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="chart-row">
-                <div class="rate-div ">
-                    <p class="rate-p">Treatment</p>
-                </div>
-                <div class="oneline-div">
-                    <div class="inner-line-div">
-                    <div class="colorful-line-div "  id="Good">
-                        <br>
-                    </div>
-                    </div>
-                </div>
-                <div class="percent-div">
-                    <p class="percent-p">
-                      <span id="num-percentx2"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="rate-div ">
-              <p class="rate-p">Your 5-year risk of hip fracture:</p>
-            </div>
-            <div class="chart-row">
-                <div class="rate-div ">
-                    <p class="rate-p">Normal</p>
-                </div>
-
-                <div class="oneline-div">
-
-                    <div class="inner-line-div">
-                    <div class="colorful-line-div "  id="medium">
-                        <br>
-                    </div>
-                    </div>
-
-                </div>
-
-                <div class="percent-div">
-                    <p class="percent-p">
-                      <span id="num-percentx3"></span>
-                    </p>
-
-                </div>
-            </div>
-            <div class="chart-row">
-                <div class="rate-div ">
-                    <p class="rate-p">Treatment</p>
-                </div>
-                <div class="oneline-div">
-
-                    <div class="inner-line-div">
-                    <div class="colorful-line-div "  id="bad">
-                        <br>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="percent-div">
-                    <p class="percent-p">
-                      <span id="num-percentx4"></span>
-                    </p>
-                </div>
-            </div>
-            <!--<div class="chart-row">
-                <div class="rate-div ">
-                    <p class="rate-p">Very bad</p>
-                </div>
-                <div class="oneline-div">
-                    <div class="inner-line-div">
-                    <div class="colorful-line-div "  id="verybad">
-                        <br>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="percent-div">
-                    <p class="percent-p">
-                        <span>40%</span>
-                    </p>
-                </div>
-            </div>-->
-            <!--<input type='button' class="btn-solid-lg secondary" value='Print Your Result' onclick='printDocument("pricing,panel-light,first-chart,third-chart,second-chart,fourth-chart, bone-page-form");'>
-            <button class="btn-solid-lg secondary"> print</button>-->
-            <button class="btn-solid-lg secondary" onclick='printDocument("pricing,panel-light,first-chart,third-chart,second-chart,fourth-chart, bone-page-form");'></i>Print Your Result</button>
-        </div>
-     </div>
-    </div>
-    </div>
-
-
-
-
       <div id="first-chart" class="panel-light hidden">
         <div id="tm-gallery-page-vạch" class="tm-gallery-page hidden">
           <div class="chart4">
-            <p>Nguy cơ gãy xương do loãng xương trong vòng 5 năm tới.</p>
+            <p>Estimates in next 5 years</p>
             <div class="first-chart">
               <span class="row-title">
                 Your 5-year risk of any fracture
@@ -547,19 +340,14 @@
               </div>
             </div>
             <div role="group" class="btn-group gr-center">
-              <button style="margin-right: 20px;" class="btn btn-default btn-sm custom btn-line active" type="button" id="hip" onclick="hip()">How to interpret your risk</button>
-              <button class="btn btn-default btn-sm custom btn-line" type="button" id="any" onclick="any()">Your pharmaceutical benefit</button>
+              <button style="margin-right: 20px;" class="btn-solid-reg2 btn-sm custom btn-line active" type="button" id="hip" onclick="hip()">How to interpret your risk</button>
+              <button class="btn-solid-reg2 btn-sm custom btn-line" type="button" id="any" onclick="any()">Your pharmaceutical benefit</button>
             </div>
           </div>
         </div>
       </div>
-      <div id="second-chart" class="panel-light hidden">
+       <div id="second-chart" class="panel-light hidden">
         <div id="tm-gallery-page-hình" class="tm-gallery-page row1 hidden2">
-          <!-- <div class="col-xs-12"> -->
-          <!-- <div> -->
-          <!-- <div class="row1" style="clear:both;"> -->
-          <!-- <div> -->
-          <!-- <div id="chartContainer3" class="col-sm-7"> -->
           <div class="form-horizontal">
             <div class="interpret">
               <h2>Interpretation of your fracture risk</h2>
@@ -601,7 +389,8 @@
   
         </div>
       </div>
-      <div id="second-chart" class="panel-light hidden">
+     
+      <div id="third-chart" class="panel-light hidden">
         <div class="interpret">
           <h2>Pharmaceutical Benefits Scheme</h2>
         </div>
@@ -660,76 +449,182 @@
             </div>
           </div>
         </div>
+      </div>    
+    <button onclick="window.print();" id="Print-btn" class="btn1 hidden">Print</button>
+    </div>
+    <div class="infomation-result hidden-print">
+      <h2>Result</h2>
+      <div class="value1">
+          <p>Full Name: <span id="print-name"></span></p>
       </div>
-    </div>
-    </div>
-
-
-
-
-    <!--<footer class="footer-distributed">
-        <div class="footer-left">
-          <h3>Garvan
-            <span>institute of medical research</span>
-          </h3>
-          <p class="footer-links">
-            <a href="home.html">Home</a>
-            .
-            <a href="introduce.html">About</a>
-            .
-            <a href="index.html">iPredict</a>
-            .
-             <a href="ask.html">Hỏi đáp</a>
-            . 
-            <a href="contact.html">Feedback</a>
+      <div class="value">
+          <p>Age: <span id="print-age"></span></p>
+      </div>
+      <div class="value">
+          <p>Gender: <span id="print-gender"></span></p>
+      </div>
+      <div class="value">
+          <p>Height: <span id="print-height"></span></p>
+      </div>
+      <div class="value">
+          <p>Weight: <span id="print-weight"></span></p>
+      </div>
+      <div class="value">
+          <p>Fractures since the age of 50: <span id="print-frac50"></span></p>
+      </div>
+      <div class="value">
+          <p>Falls over last 12 months: <span id="print-fall"></span></p>
+      </div>
+      <div class="value">
+          <p>T-scores: <span id="print-Tscore"></span></p>
+      </div>
+      <div class="value1 actual-bmd">
+          <div>
+              <p>Actual BMD: <span id="print-BMD"></span></p>
+          </div>
+          <div>
+              <p>Densitometer: <span id="print-densitometer"></span></p>
+          </div>     
+      </div>
+      <div class="value">
+          <p>Diseases: <span id="print-diseases"></span></p>
+      </div>
+      <div class="value">
+          <p>Disclaimer: 
+              <span>
+                  The results produced by our calculator should serve as a guide only.
+                   If concerned about your fracture risk, 
+                  it is also important to consult your doctor or a bone specialist.</span>
+          </p>
+      </div>
+      <div class="value">
+          <div id="first-chart" class="">
+              <div id="" class="tm-gallery-page ">
+                <div class="chart4">
+                  <p>Estimates in next 5 years</p>
+                  <div class="first-chart">
+                    <span class="row-title">
+                      Your 5-year risk of any fracture
+                    </span>
+                    <div class="row">
+                      <div class="col-3 percent col-3-w">
+                        <span id="print-num-percent"></span>
+                      </div>
+                      <div class="col-8 per-chart" id="print-chartContainer4">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="second-chart">
+        
+                    <div class="row">
+                      <div class="col-3 percent col-3-w">
+                        <span id="print-num-percent2"></span>
+                      </div>
+                      <div class="col-8 per-chart" id="print-chartContainer4_2"></div>
+                    </div>
+                  </div>
+                  <div class="third-chart">
+                    <span class="row-title" style="margin-top: 10px; display: block;">
+                      Your 5-year risk of hip fracture
+                    </span>
+                    <div class="row">
+                      <div class="col-3 percent col-3-w">
+                        <span id="print-num-percent3"></span>
+                      </div>
+                      <div class="col-8 per-chart" id="print-chartContainer4_3"></div>
+                    </div>
+                  </div>
+                  <div class="fourth-chart">
+                    <div class="row">
+                      <div class="col-3 percent col-3-w">
+                        <span id="print-num-percent4"></span>
+                      </div>
+                      <div class="col-8 per-chart" id="print-chartContainer4_4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="value">
+        <div id="second-chart" class="">
+          <div id="" class="tm-gallery-page row1">
+            <div class="form-horizontal">
+              <div class="">
+                <h2>Interpretation of your fracture risk</h2>
+              </div>
+            </div>
+            <div class="">
+              <div class="col-12" style="margin-bottom: 30px; font-size: 18px;">
+                <span class="any-frac">Your 5-year risk of any fracture: <span id="print-any-percent"></span></span>
+                <br>
+                <span class="dtl-frac">
+                  Among 100 men/women like you, <span id="print-any-number"></span> will suffer a fracture in the next 5 years,
+                  and <span id="print-not-any-number"></span> will not.
+                </span>
+                </span>
+              </div>
+              <div style="display: flex;justify-content: space-around; margin-bottom: 0px;">
+                <div id="print-chartContainer3">
+    
+                </div>
+              </div>
+            </div>
+            
+            <div class="">
+              <div class="col-12" style="margin-bottom: 30px; font-size: 18px;">
+                <span class="any-frac">Your 5-year risk of hip fracture: <span id="print-hip-percent"></span></span>
+                <br>
+                <span class="dtl-frac">
+                  Among 100 men/women like you, <span id="print-hip-number"></span> will suffer a hip fracture in the next 5
+                  years, and <span id="print-not-hip-number"></span> will not.
+                </span>
+                </span>
+              </div>
+              <div style="display: flex;justify-content: space-around;">
+                <div id="print-chartContainer3-2" class="">
+            
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <div class="value">
+        <div id="third-chart" class="" style="margin-top: 150px;">
+          <div class="">
+            <h2>Pharmaceutical Benefits Scheme</h2>
+          </div>
+          <p>The following risk values are equivalent to those at which current Pharmaceutical Benefits Scheme
+            reimbursements for osteoporosis therapy apply.</p>
+          <b>Any Osteoporotic / Fragility Fracture</b>
+          <p>5 year risk: 8-13%</p>
+          <b>Hip Fracture</b>
+          <p>
+            5 year risk: 2-5%
           </p>
         </div>
-        <div class="footer-center">
-          <div>
-            <i class="fa fa-map-marker-alt"></i>
-            <p>
-              <span>384 Victoria Street
-                Darlinghurst NSW 2010</span>
-                Australia
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-phone-alt"></i>
-            <p>T. +61 (02) 9295 8100 <br>
-              F. +61 (02) 9295 8101
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="">foundation@garvan.org.au</a></p>
-          </div>
-        </div>
-        <div class="footer-right">
-          <p class="footer-company-about">
-            <span>Follow us</span>
-             Dự án gồm 3 thành viên là sinh viên đến từ khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh 
-          </p>
-          <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-             <a href=""><i class="fab fa-github"></i></a> 
-          </divz
-        </div>
-      </footer>-->
+      </div>
+  </div>
+</div>
+</div>
+
 </body>
+
 <footer>
         <!-- Copyright -->
   <div class="copyright">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
-                <p class="pb-2 p-small statement"> © Gamer Loves Food 2021</a></p>
+                <p class="pb-2 p-small statement"> © Web App Demo 2021</a></p>
             </div> 
 
         <!-- end of container -->
   </div> <!-- end of copyright -->
         <!-- end of copyright -->
 </footer>
+
+
 <script>
     
     function hip() {
@@ -766,13 +661,26 @@
 
     function Result() {
 
+      document.getElementById("Print-btn").classList.remove("hidden");
+      var full_name  = document.getElementById("name").value;
       var age = document.getElementById("age").value;
           var tscore = document.getElementById("T-score").value;
           var wei = document.getElementById("weight").value;
+          var height = document.getElementById("height").value;
           var pfx = document.getElementById("Fra-50").value;
           var fall = document.getElementById("Fall-12").value;
           var checkbox = document.getElementById("disclaimer");
           var actual = document.getElementById("BMD").value;
+
+
+          document.getElementById("print-age").innerHTML = age;
+          document.getElementById("print-name").innerHTML = full_name;
+          document.getElementById("print-Tscore").innerHTML = tscore;
+          document.getElementById("print-weight").innerHTML = wei;
+          document.getElementById("print-height").innerHTML = height;
+          document.getElementById("print-frac50").innerHTML = pfx;
+          document.getElementById("print-fall").innerHTML = fall;
+          document.getElementById("print-BMD").innerHTML = actual;
 
           var ele = document.getElementsByName('gender');     
             for(i = 0; i < ele.length; i++) {
@@ -785,6 +693,112 @@
                 if(ele3[i].checked)
                 var bmd = ele3[i].value;
             }
+
+            if(gender == "men")
+            {
+              document.getElementById("print-gender").innerHTML = "Male";
+            }
+            else
+            {
+              document.getElementById("print-gender").innerHTML = "Female";
+            }
+
+            if(bmd == "DXA_GE")
+            {
+              document.getElementById("print-densitometer").innerHTML = "by DXA GE Lunar";
+            }
+            else
+            {
+              document.getElementById("print-densitometer").innerHTML = "by DXA Hologic";
+            }
+
+            var disea1 = document.getElementsByName('Cardiovascular');
+            for(i = 0; i < disea1.length; i++) {
+                if(disea1[i].checked)
+                var disea1_1 = disea1[i].value;
+                if(disea1_1 == "yes1")
+                {
+                  disea1_1 = "Cardiovascular";
+                }
+                else
+                {
+                  disea1_1 = "";
+                }
+            }
+
+            var disea2 = document.getElementsByName('cancer');
+            for(i = 0; i < disea2.length; i++) {
+                if(disea2[i].checked)
+                var disea2_2 = disea2[i].value;
+                if(disea2_2 == "yes2")
+                {
+                  disea2_2 = "Cancer";
+                }
+                else
+                {
+                  disea2_2 = "";
+                }
+            }
+            
+            var disea3 = document.getElementsByName('Type_2_diabetes');
+            for(i = 0; i < disea3.length; i++) {
+                if(disea3[i].checked)
+                var disea3_3 = disea3[i].value;
+                if(disea3_3 == "yes3")
+                {
+                  disea3_3 = "Type 2 diabetes";
+                }
+                else
+                {
+                  disea3_3 = "";
+                }
+            }
+
+            var disea4 = document.getElementsByName('Neuromuscular');
+            for(i = 0; i < disea4.length; i++) {
+                if(disea4[i].checked)
+                var disea4_4 = disea4[i].value;
+                if(disea4_4 == "yes4")
+                {
+                  disea4_4 = "Neuromuscular";
+                }
+                else
+                {
+                  disea4_4 = "";
+                }
+            }
+
+            var disea5 = document.getElementsByName('Rheumatoid_arthritis');
+            for(i = 0; i < disea5.length; i++) {
+                if(disea5[i].checked)
+                var disea5_5 = disea5[i].value;
+                if(disea5_5 == "yes5")
+                {
+                  disea5_5 = "Rheumatoid arthritis";
+                }
+                else
+                {
+                  disea5_5 = "";
+                }
+            }
+
+            var disea6 = document.getElementsByName('COPD');
+            for(i = 0; i < disea6.length; i++) {
+                if(disea6[i].checked)
+                var disea6_6 = disea6[i].value;
+                if(disea6_6 == "yes6")
+                {
+                  disea6_6 = "COPD";
+                }
+                else
+                {
+                  disea6_6 = "";
+                }
+            }
+
+           let diseaArr = [disea1_1,disea2_2,disea3_3,disea4_4,disea5_5,disea6_6];
+           document.getElementById("print-diseases").innerHTML = diseaArr.join('  ');
+           
 
             if(gender == "wo" && actual != '' && bmd == "Lunar" && tscore == ''){
               // tscore = Math.round(((actual - 1)/0.12));
@@ -980,6 +994,7 @@
            var risk5_any_heal = risk5_any_sr.toFixed(m);
           }
       
+          
 
           document.getElementById("result-page").classList.remove("hidden");
     document.getElementById("bone-page-form").classList.add("hidden");
@@ -997,25 +1012,33 @@
       var number2 = 100;
 
       document.getElementById('num-percent').innerHTML = 'Without treatment:  ' + risk5_any + '%';
-      document.getElementById('num-percentx1').innerHTML = risk5_any + '%';
-      //$(Best).val(risk5_any)
-      $("#Best").css("width", risk5_any+ '%');
 
-      document.getElementById('num-percent2').innerHTML = 'With effective treatment:  ' + risk5_any_heal + '%';
-      document.getElementById('num-percentx2').innerHTML = risk5_any_heal + '%';
-      $("#Good").css("width", risk5_any_heal+ '%');
 
-      document.getElementById('num-percent3').innerHTML = 'Without treatment:' + risk5_hip + '%';
-      document.getElementById('num-percentx3').innerHTML = risk5_hip + '%';
-      $("#medium").css("width", risk5_hip+ '%');
+      document.getElementById('num-percent2').innerHTML = 'Effective treatment:  ' + risk5_any_heal + '%';
 
-      document.getElementById('num-percent4').innerHTML = 'With effective treatment:  ' + risk5_hip_heal + '%';
-      document.getElementById('num-percentx4').innerHTML = risk5_hip_heal + '%';
-      $("#bad").css("width", risk5_hip_heal+ '%');
+
+      document.getElementById('num-percent3').innerHTML = 'Without treatment: ' + risk5_hip + '%';
+
+
+      document.getElementById('num-percent4').innerHTML = 'Effective treatment:  ' + risk5_hip_heal + '%';
+
+      ////////////////////////////////////////////////////////////
+
+      document.getElementById('print-num-percent').innerHTML = 'Without treatment:  ' + risk5_any + '%';
+
+
+      document.getElementById('print-num-percent2').innerHTML = 'Effective treatment:  ' + risk5_any_heal + '%';
+
+
+      document.getElementById('print-num-percent3').innerHTML = 'Without treatment: ' + risk5_hip + '%';
+
+
+      document.getElementById('print-num-percent4').innerHTML = 'Effective treatment:  ' + risk5_hip_heal + '%';
+
       ////////////blue////////////////
       for (var i = 1; i <= 100; i++) {
         var cach = i % 5;
-        if (i <= 10) {
+        if (i <= risk5_any) {
           var verti1 = document.createElement("IMG");
           verti1.setAttribute("src", "SVG/rect2.svg");
           verti1.setAttribute("id", "v-img");
@@ -1033,10 +1056,34 @@
           document.getElementById("chartContainer4").appendChild(sp);
         }
       }
+
+      /////////////////////////print//////////////////////
+      for (var i = 1; i <= 100; i++) {
+        var cach = i % 5;
+        if (i <= risk5_any) {
+          var print_verti1 = document.createElement("IMG");
+          print_verti1.setAttribute("src", "SVG/rect2.svg");
+          print_verti1.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4").appendChild(print_verti1);
+        }
+        else {
+          var print_verti2 = document.createElement("IMG");
+          print_verti2.setAttribute("src", "SVG/rect.svg");
+          print_verti2.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4").appendChild(print_verti2);
+        };
+
+        if (cach == 0) {
+          var print_sp = document.createTextNode(" ");
+          document.getElementById("print-chartContainer4").appendChild(print_sp);
+        }
+      }
+
+
       ////////////purple////////////
       for (var i = 1; i <= 100; i++) {
         var cach = i % 5;
-        if (i <= 12) {
+        if (i <= risk5_any_heal) {
           var verti1 = document.createElement("IMG");
           verti1.setAttribute("src", "SVG/rect3.svg");
           verti1.setAttribute("id", "v-img");
@@ -1054,10 +1101,34 @@
           document.getElementById("chartContainer4_2").appendChild(sp);
         }
       }
+      ///////////////////////print///////////////////////////////////////
+      for (var i = 1; i <= 100; i++) {
+        var cach = i % 5;
+        if (i <= risk5_any_heal) {
+          var print_verti1 = document.createElement("IMG");
+          print_verti1.setAttribute("src", "SVG/rect3.svg");
+          print_verti1.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_2").appendChild(print_verti1);
+        }
+        else {
+          var print_verti2 = document.createElement("IMG");
+          print_verti2.setAttribute("src", "SVG/rect.svg");
+          print_verti2.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_2").appendChild(print_verti2);
+        };
+
+        if (cach == 0) {
+          var print_sp = document.createTextNode(" ");
+          document.getElementById("print-chartContainer4_2").appendChild(print_sp);
+        }
+      }
+
+
+
       /////////////////
       for (var i = 1; i <= 100; i++) {
         var cach = i % 5;
-        if (i <= 15) {
+        if (i <= risk5_hip) {
           var verti1 = document.createElement("IMG");
           verti1.setAttribute("src", "SVG/rect2.svg");
           verti1.setAttribute("id", "v-img");
@@ -1075,10 +1146,33 @@
           document.getElementById("chartContainer4_3").appendChild(sp);
         }
       }
+      ////////////////////////////print/////////////////////////////////
+      for (var i = 1; i <= 100; i++) {
+        var cach = i % 5;
+        if (i <= risk5_hip) {
+          var print_verti1 = document.createElement("IMG");
+          print_verti1.setAttribute("src", "SVG/rect2.svg");
+          print_verti1.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_3").appendChild(print_verti1);
+        }
+        else {
+          var print_verti2 = document.createElement("IMG");
+          print_verti2.setAttribute("src", "SVG/rect.svg");
+          print_verti2.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_3").appendChild(print_verti2);
+        };
+
+        if (cach == 0) {
+          var print_sp = document.createTextNode(" ");
+          document.getElementById("print-chartContainer4_3").appendChild(print_sp);
+        }
+      }
+
+
       /////////////pink///////////////
       for (var i = 1; i <= 100; i++) {
         var cach = i % 5;
-        if (i <= 17) {
+        if (i <= risk5_hip_heal) {
           var verti1 = document.createElement("IMG");
           verti1.setAttribute("src", "SVG/rect3.svg");
           verti1.setAttribute("id", "v-img");
@@ -1096,6 +1190,29 @@
           document.getElementById("chartContainer4_4").appendChild(sp);
         }
       }
+      //////////////////////////print//////////////////////////
+      for (var i = 1; i <= 100; i++) {
+        var cach = i % 5;
+        if (i <= risk5_hip_heal) {
+          var print_verti1 = document.createElement("IMG");
+          print_verti1.setAttribute("src", "SVG/rect3.svg");
+          print_verti1.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_4").appendChild(print_verti1);
+        }
+        else {
+          var print_verti2 = document.createElement("IMG");
+          print_verti2.setAttribute("src", "SVG/rect.svg");
+          print_verti2.setAttribute("id", "v-img");
+          document.getElementById("print-chartContainer4_4").appendChild(print_verti2);
+        };
+
+        if (cach == 0) {
+          var print_sp = document.createTextNode(" ");
+          document.getElementById("print-chartContainer4_4").appendChild(print_sp);
+        }
+      }
+
+
 
       var broke = 100 - risk5_any;
       document.getElementById("any-percent").innerHTML = risk5_any+ "%";
@@ -1104,26 +1221,24 @@
       var tb5_hip = Math.round(risk5_any, 1);
       var t = document.getElementById("p-img");
       if (t == null) {
-        // var y3 = document.getElementById("name").value;
+        
         for (var i = 0; i < 10 * 10; i++) {
           var row = i / 10;
           var col = i % 10;
           if (col == 0 && row > 0) {
-            //document.write("<div style='clear:both'></div>");
+           
             var para3 = document.createElement("DIV");
             para3.setAttribute("style", "clear:both");
             document.getElementById("chartContainer3").appendChild(para3);
           }
           if (i < tb5_hip) {
-            //document.write("<div class='square'></div>");
-            //document.getElementById("chartContainer3").innerHTML = "<img src='img/purple.png'>";
+           
             var para = document.createElement("IMG");
             para.setAttribute("src", "img/new_p.png");
             para.setAttribute("id", "p-img");
             document.getElementById("chartContainer3").appendChild(para);
           } else {
-            //document.write("<div class='empty-square'></div>");
-            //document.getElementById("chartContainer3").innerHTML = "<img src='img/purple.png'>";
+           
             var para2 = document.createElement("IMG");
             para2.setAttribute("src", "img/new_b.png");
             para2.setAttribute("id", "p-img");
@@ -1132,39 +1247,41 @@
         }
       }
 
-      /////////////////////////////////
-      ///////////////chart3.1//////////
-      //   var broke2 = 100 - risk5_hip_heal;
-      //     document.getElementById("black-hip-number-heal").innerHTML = broke2;
-      //     document.getElementById("purple-hip-heal-number").innerHTML = risk5_hip_heal;
+      ////////////////////////print//////////////////////////////
+      var broke1 = 100 - risk5_any;
+      document.getElementById("print-any-percent").innerHTML = risk5_any+ "%";
+      document.getElementById("print-any-number").innerHTML = risk5_any;
+      document.getElementById("print-not-any-number").innerHTML = broke1;
+      var print_tb5_hip = Math.round(risk5_any, 1);
+      var print_t = document.getElementById("p4-img");
+      if (print_t == null) {
+        
+        for (var i = 0; i < 10 * 10; i++) {
+          var print_row = i / 10;
+          var print_col = i % 10;
+          if (print_col == 0 && print_row > 0) {
+           
+            var print_para3 = document.createElement("DIV");
+            print_para3.setAttribute("style", "clear:both");
+            document.getElementById("print-chartContainer3").appendChild(print_para3);
+          }
+          if (i < print_tb5_hip) {
+           
+            var print_para = document.createElement("IMG");
+            print_para.setAttribute("src", "img/new_p.png");
+            print_para.setAttribute("id", "p4-img");
+            document.getElementById("print-chartContainer3").appendChild(print_para);
+          } else {
+           
+            var print_para2 = document.createElement("IMG");
+            print_para2.setAttribute("src", "img/new_b.png");
+            print_para2.setAttribute("id", "p4-img");
+            document.getElementById("print-chartContainer3").appendChild(print_para2);
+          }
+        }
+      }
 
-      //     var tb5_hip_heal = Math.round(10,1);
-      //     var t1 = document.getElementById("p1-img");
-      //           if(t1 == null){
-      //       // var y3 = document.getElementById("name").value;
-      //   for( var i = 0; i < 10*10; i++) {
-      //    var row1 = i / 10;
-      //    var col1 = i % 10;
-      //    if(col1 == 0 && row1 > 0) {
-      //       var para3_1 = document.createElement("DIV");
-      //      para3_1.setAttribute("style","clear:both");
-      //      document.getElementById("chartContainer3-1").appendChild(para3_1);
-      //    }
-      //     if (i < tb5_hip_heal) {
-      //        var para3_2 = document.createElement("IMG");
-      //       para3_2.setAttribute("src", "S/Chart/img/new_p.png");
-      //       para3_2.setAttribute("id","p1-img");
-      //       document.getElementById("chartContainer3-1").appendChild(para3_2);
-      //     } else {
-      //        var para3_3 = document.createElement("IMG");
-      //        para3_3.setAttribute("src", "S/Chart/img/new_b.png");
-      //        para3_3.setAttribute("id","p1-img");
-      //       document.getElementById("chartContainer3-1").appendChild(para3_3);
-      //     }
-      //   }
-      // }
-
-      //var tb10 = Math.round((risk10_hip + risk10_any)/2);
+      
       ////////////chart3.2/////////////////////////////
       var broke3 = 100 - risk5_hip;
       document.getElementById("hip-percent").innerHTML = risk5_hip + "%";
@@ -1198,48 +1315,53 @@
         }
       }
 
-      ///////////////////////chart3.3/////////////////////////////
-      //   var broke4 = 100 - risk5_any_heal;
-      //         document.getElementById("black-any-heal-number").innerHTML = broke4;
-      //         document.getElementById("purple-any-heal-number").innerHTML = risk5_any_heal;
+      ///////////////////print///////////////////////////////
 
-      // var tb5_any_heal = Math.round(15,1);
-      //     var t3 = document.getElementById("p3-img");
-      //           if(t3 == null){
-      //   for( var i = 0; i < 10*10; i++) {
-      //    var row3 = i / 10;
-      //    var col3 = i % 10;
-      //    if(col3 == 0 && row3 > 0) {
-      //       var para3_1_1_1 = document.createElement("DIV");
-      //      para3_1_1_1.setAttribute("style","clear:both");
-      //      document.getElementById("chartContainer3-3").appendChild(para3_1_1_1);
-      //    }
-      //     if (i < tb5_any_heal) {
-      //        var para3_2_2_2 = document.createElement("IMG");
-      //       para3_2_2_2.setAttribute("src", "S/Chart/img/new_p.png");
-      //       para3_2_2_2.setAttribute("id","p3-img");
-      //       document.getElementById("chartContainer3-3").appendChild(para3_2_2_2);
-      //     } else {
-      //        var para3_3_3_3 = document.createElement("IMG");
-      //        para3_3_3_3.setAttribute("src", "S/Chart/img/new_b.png");
-      //        para3_3_3_3.setAttribute("id","p3-img");
-      //       document.getElementById("chartContainer3-3").appendChild(para3_3_3_3);
-      //     }
-      //   }
-      // }
+      var broke_print = 100 - risk5_hip;
+      document.getElementById("print-hip-percent").innerHTML = risk5_hip + "%";
+      document.getElementById("print-hip-number").innerHTML = risk5_hip;
+      document.getElementById("print-not-hip-number").innerHTML = broke_print;
+
+      var print_tb5_any = Math.round(risk5_hip, 1);
+      var print_t2 = document.getElementById("p5-img");
+      if (print_t2 == null) {
+        // var y3 = document.getElementById("name").value;
+        for (var i = 0; i < 10 * 10; i++) {
+          var print_row2 = i / 10;
+          var print_col2 = i % 10;
+          if (print_col2 == 0 && print_row2 > 0) {
+            var print_para3_1_1 = document.createElement("DIV");
+            print_para3_1_1.setAttribute("style", "clear:both");
+            document.getElementById("print-chartContainer3-2").appendChild(print_para3_1_1);
+          }
+          //  if (i < (100-tb5_any)) 
+          if (i < print_tb5_any) {
+            var print_para3_2_2 = document.createElement("IMG");
+            print_para3_2_2.setAttribute("src", "img/new_p.png");
+            print_para3_2_2.setAttribute("id", "p5-img");
+            document.getElementById("print-chartContainer3-2").appendChild(print_para3_2_2);
+          } else {
+            var print_para3_3_3 = document.createElement("IMG");
+            print_para3_3_3.setAttribute("src", "img/new_b.png");
+            print_para3_3_3.setAttribute("id", "p5-img");
+            document.getElementById("print-chartContainer3-2").appendChild(print_para3_3_3);
+          }
+        }
+      }
+      
 
       // ----------------Chart 5 ------------------------
 
       document.getElementById('refracture-percent').innerHTML = 'Without treatment:  ' + 10 + '%';
 
 
-      document.getElementById('refracture-percent2').innerHTML = 'With effective treatment:  ' + 12 + '%';
+      document.getElementById('refracture-percent2').innerHTML = 'Effective treatment:  ' + 12 + '%';
 
 
-      document.getElementById('mortality-percent3').innerHTML = 'Without treatment:' + 15 + '%';
+      document.getElementById('mortality-percent3').innerHTML = 'Without treatment: ' + 15 + '%';
 
 
-      document.getElementById('mortality-percent4').innerHTML = 'With effective treatment:  ' + 17 + '%';
+      document.getElementById('mortality-percent4').innerHTML = 'Effective treatment:  ' + 17 + '%';
 
       ////////////blue////////////////
       for (var i = 1; i <= 100; i++) {
