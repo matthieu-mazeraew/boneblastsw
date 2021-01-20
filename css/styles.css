@@ -244,7 +244,7 @@ h3 {
 h4 {
     color: #252c38;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     line-height: 2rem;
     letter-spacing: -0.2px;
 }
@@ -1056,7 +1056,7 @@ input[type="checkbox"] {
 /*     Footer     */
 /******************/
 .footer {
-    padding-top: 6rem;
+    padding-top: 3.5rem;
     padding-bottom: 3rem;
     background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
     text-align: center;
