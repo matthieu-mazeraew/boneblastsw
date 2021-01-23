@@ -715,6 +715,12 @@ display: flex;
 justify-content: space-between;
 width: 100%;
 }
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
+    text-align: center;
+}
 .right-container .footer {
 align-items: center;
 background: #fff;
@@ -1450,8 +1456,9 @@ margin-left: 100px;
 /*     Copyright     */
 /*********************/
 .copyright {
-    padding-top: 1.5rem;
-    background-color: #c5eaf9;
+    padding-top: 2.5rem;
+    padding-bottom: .5rem;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
     text-align: center;
 }
 
