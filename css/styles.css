@@ -33,6 +33,15 @@ Colors:
 
 
 
+li {
+  display: list-item;
+  list-style-position: inside;
+}
+
+ol li {
+  display:block;
+}
+
 h1 {
   margin: 50px 0 30px;
   text-align: center;
@@ -90,7 +99,11 @@ h1 {
 
 .faq.active .faq-text {
   display: block;
+  align-items:  left-align;
+  justify-content: left-align;
 }
+
+
 
 .faq-toggle {
   background-color: transparent;
@@ -763,20 +776,20 @@ input[type="checkbox"] {
 /********************/
 .cards-1 {
     padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     text-align: center;
 }
 
 .cards-1 .card {
-    margin-bottom: 3.5rem;
-    padding: 3.125rem 1rem 2.125rem 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.125rem 0.5rem 0.125rem 0.5rem;
     border: none;
     border-radius: 16px;
     background-color: #f1f9fc;
 }
 
 .cards-1 .card-image {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .cards-1 .card-image img {
@@ -1125,8 +1138,8 @@ a:hover.back-to-top {
 /*     Extra Pages     */
 /***********************/
 .ex-header {
-    padding-top: 3.5rem;
-    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     background-color: #f1f9fc;
 }
 
@@ -1249,11 +1262,11 @@ a:hover.back-to-top {
     /* Features */
     .cards-1 .card {
         display: inline-block;
-        width: 306px;
+        width: 326px;
         vertical-align: top;
     }
 
-    .cards-1 .card:nth-of-type(3n + 2) {
+    .cards-1 .card:nth-of-type(2n + 2) {
         margin-right: 1rem;
         margin-left: 1rem;
     }
@@ -1287,11 +1300,11 @@ a:hover.back-to-top {
     .cards-2 .card {
         display: inline-block;
         max-width: 100%;
-        width: 312px;
+        width: 352px;
         vertical-align: top;
     }
 
-    .cards-2 .card:nth-of-type(3n + 2) {
+    .cards-2 .card:nth-of-type(2n + 2) {
         margin-right: 0.375rem;
         margin-left: 0.375rem;
     }
@@ -1348,12 +1361,12 @@ a:hover.back-to-top {
 
     /* Features */
     .cards-1 .card {
-        width: 342px;
+        width: 382px;
         padding-right: 2.875rem;
         padding-left: 2.875rem;
     }
 
-    .cards-1 .card:nth-of-type(3n + 2) {
+    .cards-1 .card:nth-of-type(2n + 2) {
         margin-right: 1.5rem;
         margin-left: 1.5rem;
     }
@@ -1373,23 +1386,23 @@ a:hover.back-to-top {
 
     /* Pricing */
     .cards-2 .card {
-        width: 335px;
+        width: 385px;
     }
 
-    .cards-2 .card:nth-of-type(3n + 2) {
-        margin-right: 2.25rem;
-        margin-left: 2.25rem;
+    .cards-2 .card:nth-of-type(2n + 2) {
+        margin-right: 2.0rem;
+        margin-left: 2.0rem;
     }
 
     .cards-2 .card .card-body {
-        padding-right: 2.25rem;
-        padding-left: 2.25rem;
+        padding-right: 2.0rem;
+        padding-left: 2.0rem;
     }
     /* end of pricing */
 
     /* Extra Pages */
     .ex-cards-1 .card {
-        width: 328px;
+        width: 388px;
     }
 
     .ex-cards-1 .card:nth-of-type(3n + 2) {
