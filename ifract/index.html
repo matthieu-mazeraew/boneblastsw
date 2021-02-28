@@ -358,7 +358,7 @@
               <span class="any-frac">Your 5-year risk of any fracture: <span id="any-percent"></span></span>
               <br>
               <span class="dtl-frac">
-                Among 100 men/women of your age(?), <span id="any-number"></span> will suffer a fracture in the next 5 years,and <span id="not-any-number"></span> will not. 
+                Among 100 men/women of your age, (?) will suffer a fracture in the next 5 years,and <span id="not-any-number"></span> will not. 
                 <br>
                 Among 100 men/women like you, <span id="any-number"></span> will suffer a fracture in the next 5 years,
                 and <span id="not-any-number"></span> will not.
@@ -457,27 +457,27 @@
     <button onclick="window.print();" id="Print-btn" class="btn1 hidden">Print</button>
     </div>
     <div class="infomation-result hidden-print">
-      <h2>Result</h2>
+      <h2>Bone Fracture Risk Result</h2>
       <div class="value1">
           <p>Full Name: <span id="print-name"></span></p>
       </div>
       <div class="value">
-          <p>Age: <span id="print-age"></span></p>
+          <p>Age: <span id="print-age"></span> years old.</p>
       </div>
       <div class="value">
           <p>Gender: <span id="print-gender"></span></p>
       </div>
       <div class="value">
-          <p>Height: <span id="print-height"></span></p>
+          <p>Height: <span id="print-height"></span> cm</p>
       </div>
       <div class="value">
-          <p>Weight: <span id="print-weight"></span></p>
+          <p>Weight: <span id="print-weight"></span> kg</p>
       </div>
       <div class="value">
-          <p>Fractures since the age of 50: <span id="print-frac50"></span></p>
+          <p>Fractures since the age of 50: <span id="print-frac50"></span> time(s).</p>
       </div>
       <div class="value">
-          <p>Falls over last 12 months: <span id="print-fall"></span></p>
+          <p>Falls over last 12 months: <span id="print-fall"></span> time(s)</p>
       </div>
       <div class="value">
           <p>T-scores: <span id="print-Tscore"></span></p>
@@ -505,7 +505,7 @@
           <div id="first-chart" class="">
               <div id="" class="tm-gallery-page ">
                 <div class="chart4">
-                  <p>Estimates in next 5 years</p>
+                  <!--<p>Estimates in next 5 years</p>-->
                   <div class="first-chart">
                     <span class="row-title">
                       Your 5-year risk of any fracture
@@ -563,6 +563,7 @@
                 <span class="any-frac">Your 5-year risk of any fracture: <span id="print-any-percent"></span></span>
                 <br>
                 <span class="dtl-frac">
+                  [Adding:Among 100 men/women of your age, (?) will suffer a fracture in the next 5 years, and (?) will not.]
                   Among 100 men/women like you, <span id="print-any-number"></span> will suffer a fracture in the next 5 years,
                   and <span id="print-not-any-number"></span> will not.
                 </span>
@@ -570,7 +571,6 @@
               </div>
               <div style="display: flex;justify-content: space-around; margin-bottom: 0px;">
                 <div id="print-chartContainer3">
-    
                 </div>
               </div>
             </div>
@@ -580,6 +580,7 @@
                 <span class="any-frac">Your 5-year risk of hip fracture: <span id="print-hip-percent"></span></span>
                 <br>
                 <span class="dtl-frac">
+                  [Adding:Among 100 men/women of your age, (?) will suffer a hip fracture in the next 5 years, and (?) will not.]
                   Among 100 men/women like you, <span id="print-hip-number"></span> will suffer a hip fracture in the next 5
                   years, and <span id="print-not-hip-number"></span> will not.
                 </span>
@@ -587,11 +588,10 @@
               </div>
               <div style="display: flex;justify-content: space-around;">
                 <div id="print-chartContainer3-2" class="">
-            
                 </div>
               </div>
+              [Optional Adding if meet required conditions:If you will sustain a fracture, your risk of subsequent fracture is {?} %.]
             </div>
-    
           </div>
         </div>
       </div>
@@ -621,8 +621,7 @@
   <div class="copyright">
             <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
                 <p class="pb-2 p-small statement"> © Web App Demo 2021</a></p>
-            </div> 
-
+            </div>
         <!-- end of container -->
   </div> <!-- end of copyright -->
         <!-- end of copyright -->
