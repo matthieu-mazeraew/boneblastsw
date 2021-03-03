@@ -690,31 +690,29 @@
                 if(ele[i].checked)
                 var gender = ele[i].value;
             }
-            var ele3 = document.getElementsByName('DXA');
+            var ele3 = document.getElementsByName('Densitometer');
               
             for(i = 0; i < ele3.length; i++) {
                 if(ele3[i].checked)
                 var bmd = ele3[i].value;
             }
-
-            if(gender == "men")
-            {
-              document.getElementById("print-gender").innerHTML = "Male";
+            if(gender == "wo" && actual != '' && bmd == "DXA_GE" && tscore == ''){
+              // tscore = Math.round(((actual - 1)/0.12));
+            var tscore2 = ((actual-1)/0.12).toFixed(2);    
             }
-            else
+            else if(gender == "men"  && actual != '' && bmd == "DXA_GE" && tscore == '')
             {
-              document.getElementById("print-gender").innerHTML = "Female";
+             var tscore2 = ((actual-1.04)/0.12).toFixed(2);
             }
-
-            if(bmd == "DXA_GE")
+            else if (gender == "wo" && actual != '' && bmd == "DXA_Holo" && tscore == '')
             {
-              document.getElementById("print-densitometer").innerHTML = "by DXA GE Lunar";
+              var tscore2 = ((actual-0.849)/0.115).toFixed(2);
             }
-            else
+            else if(gender == "men" && actual != '' && bmd == "DXA_Holo" && tscore == '')
             {
-              document.getElementById("print-densitometer").innerHTML = "by DXA Hologic";
+              var tscore2 = ((actual-0.92)/0.133).toFixed(2);
             }
-
+            
             var disea1 = document.getElementsByName('Cardiovascular');
             for(i = 0; i < disea1.length; i++) {
                 if(disea1[i].checked)
