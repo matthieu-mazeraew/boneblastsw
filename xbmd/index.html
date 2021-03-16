@@ -46,7 +46,11 @@
                   <div class="blockText">HEIGHT</div><input class="heightInput" />
               </div>-->
               <div class="tscoreBlock">
-                  <div class="blockText">T-score</div><input class="tscoreInput" />
+                  <div class="blockText">T-score <div class="tooltip">ⓘ
+                    <span class="tooltiptext">T-score is the BMD value compared with young normal people of the same sex and general ethnicity. These are usually listed prominently on the BMD report. You must enter the + or - in front of the value as shown.
+                    </span></div></div><input class="tscoreInput" />
+                     
+                      
               </div>
               <div class="tuoiBlock">
                   <div class="blockText">AGE</div><input class="tuoiInput" />
@@ -70,10 +74,15 @@
               <div class="resultTitle">Your Result</div>
               <div class="blockOutside">
                   <div class="blockInside">
-                      <div class="resultRange">NORMAL</div>
+                      <div id="donut" class="semi-donut margin" 
+                           style="--percentage : 50; --fill: #4CAF50 ;">
+                        <div class="resultRange">NORMAL</div>
+                      </div>
+
+                      <!--<div class="resultRange">NORMAL</div>-->
                       <div class="resultBMI">22.0</div>
                       <div class="suggestBMI">
-                          <div class="suggestTitle">Suggest the risk should be from</div><span class="min">18%</span><span>~</span><span class="max"> 20%</span><span>.</span>
+                          <div class="suggestTitle">Suggest the risk should be from</div><span class="min">18% </span><span>~</span><span class="max"> 20%</span><span>.</span>
                       </div>
                       <div class="suggestion">Get measure every 2 years. Thank you!</div>
                   </div>

@@ -81,6 +81,7 @@ $(".calculateBtn").click(function(){
         }
         i=i+1
         if (typeof result_risk == 'undefined') {result_risk = risk_array[14]; i=15}
+        if (result_risk ==0) {result_risk = 0.01}
 
         console.log(risk_array)
         console.log("year "+ (i));
@@ -88,22 +89,41 @@ $(".calculateBtn").click(function(){
 
 
 
-    if(i>10){
+    if(i>5){
         range = 'Underweight';
         $(".resultRange").css("color","#32DC7C");
         $(".suggestion").text("You have low risk. Enjoy your life！");
-    }else if(i<2){
+        document.getElementById("donut").style.setProperty("--fill", "#4CAF50");
+    }else if(i<3){
         range = 'Overweight';
-        $(".resultRange").css("color","#E5235A");
-        $(".suggestion").text("You have high risk. Be careful！");
+        $(".resultRange").css("color","rgb(255, 180, 201)");
+        $(".suggestion").text("You have high risk. Be careful!");
+        document.getElementById("donut").style.setProperty("--fill", "#ff054e");
     }else{
         range = 'Normal';
-        $(".resultRange").css("color","#32DC7C");
+        $(".resultRange").css("color","rgb(228, 255, 157)");
         $(".suggestion").text("You have a normal risk. Keep yourself healthy!");
+        document.getElementById("donut").style.setProperty("--fill", "#c8dd32");
     }
 
     $(".resultRange").text(range);
     $(".resultRange").text("Risk: "+ Math.round(result_risk*100) + "%");
+    
+    Math.radians = function(degrees) {
+    return degrees * Math.PI / 180;
+    }
+    //document.getElementsByClassName("semi-donut margin").style.setProperty= "#E5235A";
+
+    //document.documentElement.style.setProperty('--percentage', 133);
+    //var x = document.getElementsByClassName("semi-donut");
+    //x.style.setProperty("--percentage", 10);
+    //document.getElementById(".semi-donut margin").setAttribute("--percentage", 10);
+    //$(".semi-donut").css("--percentage", 'rotate(' + 40 + 'deg)' )    ;
+    //$(".semi-donut").css("--percentage", 'rotate(' + 40 + 'deg)' )    ;
+    //document.documentElement.style.setProperty("--percentage", 11);
+    document.getElementById("donut").style.setProperty("--percentage", Math.round(result_risk*100));
+
+
         
         $(".resultBMI").text(BMI);
         $(".resultBMI").text("Next "+ i +" Years");

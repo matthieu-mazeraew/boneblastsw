@@ -53,13 +53,13 @@ html, body {
   padding: 25px 0px 15px 0px; }
 
 .resultRange {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 700; }
 
 .resultBMI {
   font-size: 40px;
   font-weight: 700;
-  color: #E81D58; }
+  color: #45fcff; }
 
 .suggestBMI {
   padding: 20px 0px; }
@@ -154,3 +154,84 @@ html, body {
     cursor: pointer;
     background-color: #FFFFFF;
     color: #E81D58; }
+
+
+.semi-donut {
+  --percentage: 0;
+  --fill: #ff0;
+  width: 150px;
+  height: 75px;
+  margin: auto;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  color: var(--fill);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.semi-donut:after {
+  content: "";
+  width: 150px;
+  height: 150px;
+  border: 20px solid;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) var(--fill) var(--fill);
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8 ) ));
+  animation: fillAnimation 5s ease-in;
+}
+
+
+@keyframes fillAnimation {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes fillGraphAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3rem;
+  color: white;
+
+  /*border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  padding: 2px 5px 2px 5px;
+  background-color: #74488D;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  /*padding: 5px 0;*/
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
