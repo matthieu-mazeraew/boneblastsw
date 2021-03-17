@@ -139,4 +139,11 @@ $(".calculateBtn").click(function(){
 
 
 
+$(".fas fa-bars").click(function(){
+  href = "index.html";
+});
 
+function gohome()
+{
+window.location.href="../index.html"
+}

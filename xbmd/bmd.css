@@ -71,9 +71,11 @@ html, body {
   color: #FFFFFF; }
 
 .title {
-  padding: 30px 0px 20px 0px; }
+  padding: 30px 0px 20px 0px; 
+  }
   .title i {
     position: absolute;
+    color: white;
     font-size: 20px;
     left: 30px;
     top: 25px; }
@@ -234,4 +236,6 @@ html, body {
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  visibility: visible;}
+
+
