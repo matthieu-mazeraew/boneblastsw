@@ -52,7 +52,7 @@
     <div id="pricing" class="cards-1">
         <header class="ex-header bg-gray">
             <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
-                <h16 class="xl:ml-24">Please enter your information:</h16>
+                <h16 class="maintitle xl:ml-24">Please enter your information:</h16>
             </div> <!-- end of container -->
         </header> <!-- end of ex-header --> 
     </div>
@@ -298,7 +298,7 @@
       <div id="first-chart" class="panel-light hidden">
         <div id="tm-gallery-page-vạch" class="tm-gallery-page hidden">
           <div class="chart4">
-            <p>Your risk Fracture and Interpretation:</p>
+            <!--<p>Your risk Fracture and Interpretation:</p>-->
             <div class="first-chart">
               <span class="row-title">
                 Your 5-year risk of any fracture
@@ -389,6 +389,7 @@
           
               </div>
             </div>
+              [Optional Adding if meet required conditions:If you will sustain a fracture, your risk of subsequent fracture is {?} %.]
           </div>
   
         </div>
@@ -684,6 +685,9 @@
           document.getElementById("print-frac50").innerHTML = pfx;
           document.getElementById("print-fall").innerHTML = fall;
           document.getElementById("print-BMD").innerHTML = actual;
+
+
+          $(".maintitle").text('Your fracture risk and interpretation:');
 
           var ele = document.getElementsByName('gender');     
             for(i = 0; i < ele.length; i++) {
