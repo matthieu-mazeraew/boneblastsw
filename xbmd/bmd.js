@@ -50,7 +50,12 @@ $(".female").click(function(){
 $(".calculateBtn").click(function(){
     if (gender==null || gender=="")
       {
-      alert("Please select Gender for calculation");
+      //alert("Please select Gender for calculation");
+      //Swal.fire("Please select your Gender!","","error");
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...Please select your Gender!',
+          text: '',})
       return false;
       }
 
