@@ -1,0 +1,560 @@
+*
+{
+    box-sizing: border-box;
+}
+html body{
+    /* margin:0;
+    padding: 0; */
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #f0f4f5; */
+  }
+body
+{
+    margin: 0;
+    padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+.hidden{
+    display: none !important;
+}
+.hidden2{
+    display: none !important;
+}
+.col-3-w{
+    width: 27% !important;
+}
+#tool-bone{
+    /* margin-top: 265px; */
+    font-family: Roboto,sans-serif;
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    margin: .5em auto 2em auto;
+    text-align: left;
+    background-color: #FFF;
+    max-width: 930px;
+}
+#tool-bone .predict-input-5 {
+    width: 6em !important;
+}
+#tool-bone .mtop-40{
+    margin-top: 42px;
+}
+.panel-light{
+    background-color:#DFEDEE;
+    color: #434241;
+}
+.bone-page-form{
+    margin: 0;
+    padding: 0 0 1em 0;
+    font-size: 1.25em;
+}
+.bone-page-form h2{
+    font-size: 2.25em;
+    margin: 0 0 0.5em 0;
+    font-family: Roboto,sans-serif;
+    color: #434241
+}
+#tool-bone .panel-light{
+    border-radius: 1em;
+    padding: 1.5em;
+    margin: 0em 0em 1.5em 0em;
+}
+#tool-bone .form-group{
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#tool-bone .predict-input{
+    width: 3.75em;
+    padding: 0.3em 0.4em 0.3em 0.4em !important;
+    border: #434241 0.15em solid;
+    border-radius: 0.3em;
+    font-size: 1em !important;
+    height: auto;
+}
+#tool-bone .name-input input{
+    /* display: block; */
+    margin: 0.4em 1em 0 0;
+    padding: 0;
+}
+#tool-bone .lb-input{
+    display: inline;
+    margin-right: 15px;
+}
+#tool-bone p{
+    /*margin: 0em 0em 1.25em 0em;*/
+    /*margin: 0em 0em 0.75em 0.75em;*/
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    line-height: 1.5em;
+}
+/*-------------------------- radio button-------------------------- */
+
+#tool-bone .radios-item:first-of-type {
+    margin-top: 0;
+}
+#tool-bone .radios-item {
+    margin: 1.5em 0 1.5em 0;
+    padding: 0;
+}
+#tool-bone [type="radio"]:checked, #tool-bone [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -1em;
+    opacity: 0;
+}
+#tool-bone [type="radio"]:checked + label, #tool-bone [type="radio"]:not(:checked) + label ,  #tool-bone #disclaimer +label{
+    position: relative;
+    padding-left: 2.8em;
+    cursor: pointer;
+    line-height: 2em;
+    display: inline-block;
+}
+#tool-bone .radios_label {
+    padding: 0;
+    margin: 0 35px;
+}
+#tool-bone input, #tool-bone optgroup, #tool-bone select, #tool-bone textarea {
+    font-size: 100%;
+    line-height: 1.45em;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#tool-bone [type="radio"]:checked + label:before, #tool-bone [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2em;
+    height: 2em;
+    border: 0.15em solid #434241;
+    border-radius: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+#tool-bone [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+#tool-bone [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+#tool-bone [type="radio"]:checked + label:after, #tool-bone [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background: #434241;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#tool-bone [name=disclaimer]{
+    border: 0.15em solid #434241;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+} 
+.diseases input[type="checkbox"]{
+    border: 0.15em solid #434241;
+    border-radius: 100%;
+    height: 30px;
+    width: 35px;
+    position: relative;
+    top: 1px;
+}
+.radios-item .form-checkbox-input{
+    position: relative;
+    cursor: pointer;
+    line-height: 2em;
+    display: inline-block;
+    top: -7px;
+}
+#tool-bone .btn1{
+    background-color: #FFE611;
+    font-family: Roboto,sans-serif;
+    color: #434241;
+    padding: 0.4em 1.4em 0.4em 1.4em;
+    font-size: 1.5em;
+    font-weight: 700;
+    border: none;
+    min-width: 8em;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    border-bottom: 0.125em #434241 solid;
+    cursor: pointer;
+}
+#tool-bone .btn1:not(.heartage-locked):hover, #tool-bone .btn1:not(.heartage-locked):focus {
+    background-color: #434241;
+    color: #FFE611;
+    border-bottom: 0.125em #FFE611 solid;
+}
+.btn-line{
+    padding: 30px !important;
+}
+.gr-center{
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.gr-center button{
+    border-radius: 30px;
+}
+.interpret{
+    margin-left: 25%;
+}
+.dtl-frac
+{
+   display: block !important;
+    margin-top: 20px;
+}
+
+
+.estimates-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #707070;
+}
+
+
+.ratingChart-container{
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.inner-ratingChart{
+    width: 90%;
+    margin: auto;
+}
+
+.estimates-div{
+    display: flex;
+    align-items: center;
+}
+.estimates-h3{
+    letter-spacing: 0.07em;
+}
+.estimates-p{
+    margin-left: 2em;
+    opacity: 0.36;
+    font-size: 1.6em;
+}
+
+.good-p{
+    font-size: 1.4em;
+}
+.good-p  svg{
+    margin-right: 0.5em;
+}
+
+.estimates-charts-row{
+    margin-top: 1em;
+}
+.chart-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.3em;
+    align-items: center;
+}
+
+.rate-div{
+    vertical-align: middle;
+    flex: 0 0 22%;
+}
+
+.oneline-div{
+    flex: 0  0 62%;
+    background: #E1E1E1;
+    border-radius: 4px;
+}
+.inner-line-div{
+
+}
+.colorful-line-div{
+   border-radius: 4px;
+}
+
+.percent-div{
+    flex: 0 0 5%;
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-end;
+}
+
+.rate-p{
+    margin: 0.9em 0;
+}
+.percent-p{
+    margin: 0.6em 0;
+}
+
+#Best{
+    background: #FF3D3D;
+    width: 40%;
+}
+
+#Good{
+    background:  #50E181;
+    width: 70%;
+}
+#medium{
+    background: #FF723D;
+    width: 50%;
+}
+#bad{
+    background: #71F79F;
+    width: 20%;
+}
+#verybad{
+    background: #FF3D3D;
+    width: 40%;
+}
+
+@media only screen and (max-width:1600px){
+    .ratingChart-container{
+
+        font-size: 90%;
+    }
+}
+
+
+
+@media only screen and (max-width:1400px){
+
+    .ratingChart-container{
+
+        font-size: 78%;
+    }
+
+
+    .rate-div{
+        flex: 0 0 15%;
+    }
+    .oneline-div{
+        flex: 0  0 75%;
+    }
+
+    .estimates-h3{
+        letter-spacing: 0.05em;
+    }
+}
+
+
+
+
+@media only screen and (max-width:1200px){
+
+    .ratingChart-container{
+
+        font-size: 68%;
+    }
+    .estimates-h3{
+        font-size: 2em;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width:992px){
+
+    .ratingChart-container{
+
+        font-size: 60%;
+    }
+
+    .estimates-h3{
+        font-size: 1.8em;
+        letter-spacing: 0.03em;
+    }
+
+    .estimates-p {
+        font-size: 1.4em;
+    }
+
+    .good-p svg{
+        width:0.6em;
+        height: 0.6em;
+    }
+}
+
+
+
+@media only screen and (max-width:768px){
+
+    .ratingChart-container{
+
+        font-size: 48%;
+    }
+
+
+    .estimates-p {
+        font-size: 1.2em;
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width:576px){
+
+    .ratingChart-container{
+
+        font-size: 62%;
+    }
+
+
+
+    .ratingChart-container{
+        border-radius: 0;
+        width:90%
+    }
+
+
+    .rate-div{
+        flex: 0 0 25%;
+    }
+    
+    .oneline-div{
+        flex: 0  0 60%;
+    }
+        
+    .percent-div{
+        flex: 0 0 10%;
+    }
+    .estimates-p {
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+   
+    .good-p svg{
+       margin-right: 1.3em;
+    }
+
+    
+}
+
+
+@media only screen and (max-width:480px){
+
+    .ratingChart-container{
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .estimates-charts-row {
+        margin-top: 1.5em;
+    }
+    
+    .rate-div{
+        flex: 0 0 30%;
+    }
+    
+    .oneline-div{
+        flex: 0  0 60%;
+    }
+        
+    .percent-div{
+        flex: 0 0 12%;
+    }
+}
+
+@media (max-width:810px)
+{
+    .age-lb{
+        margin-left: 0px !important;
+    }
+    .lb-input{
+        margin-left: 0px !important;
+    }
+    #tool-bone .radios_label {
+        padding: 0;
+        margin: 0px 25px !important;
+    }
+    .row{
+        display: block !important;
+    }
+    .col-8{
+        width: 91.66666667% !important; 
+    }
+    .col-3{
+        width: 35% !important;
+    }
+}
+@media (max-width:375px)
+{
+    .col-8{
+        width: 82.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
+@media (max-width:414px)
+{
+    .col-8{
+        width: 75.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
+@media (max-width:375px)
+{
+    .col-8{
+        width: 82.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
