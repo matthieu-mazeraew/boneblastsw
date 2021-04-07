@@ -40,7 +40,7 @@ input[type=number]::-webkit-inner-spin-button {
     max-width: 930px;
 }
 #tool-bone .predict-input-5 {
-    width: 5em !important;
+    width: 6em !important;
 }
 #tool-bone .mtop-40{
     margin-top: 42px;
@@ -110,7 +110,7 @@ input[type=number]::-webkit-inner-spin-button {
     left: -1em;
     opacity: 0;
 }
-#tool-bone [type="radio"]:checked + label, #tool-bone [type="radio"]:not(:checked) + label , #tool-bone [type="checkbox"]:checked +label, #tool-bone [type="checkbox"]:not(:checked) +label{
+#tool-bone [type="radio"]:checked + label, #tool-bone [type="radio"]:not(:checked) + label ,  #tool-bone #disclaimer +label{
     position: relative;
     padding-left: 2.8em;
     cursor: pointer;
@@ -119,7 +119,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 #tool-bone .radios_label {
     padding: 0;
-    margin: 0 50px;
+    margin: 0 35px;
 }
 #tool-bone input, #tool-bone optgroup, #tool-bone select, #tool-bone textarea {
     font-size: 100%;
@@ -162,12 +162,27 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-#tool-bone [type="checkbox"]{
+#tool-bone [name=disclaimer]{
     border: 0.15em solid #434241;
     border-radius: 100%;
     height: 40px;
     width: 40px;
 } 
+.diseases input[type="checkbox"]{
+    border: 0.15em solid #434241;
+    border-radius: 100%;
+    height: 30px;
+    width: 35px;
+    position: relative;
+    top: 1px;
+}
+.radios-item .form-checkbox-input{
+    position: relative;
+    cursor: pointer;
+    line-height: 2em;
+    display: inline-block;
+    top: -7px;
+}
 #tool-bone .btn1{
     background-color: #FFE611;
     font-family: Roboto,sans-serif;
@@ -228,9 +243,6 @@ input[type=number]::-webkit-inner-spin-button {
     width: 90%;
     margin: auto;
 }
-
-
-
 
 .estimates-div{
     display: flex;
@@ -294,14 +306,6 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 0.6em 0;
 }
 
-
-
-
-
-
-
-
-
 #Best{
     background: #FF3D3D;
     width: 40%;
@@ -323,17 +327,6 @@ input[type=number]::-webkit-inner-spin-button {
     background: #FF3D3D;
     width: 40%;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width:1600px){
     .ratingChart-container{
@@ -463,11 +456,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-
-
-
-
-
 @media only screen and (max-width:480px){
 
     .ratingChart-container{
@@ -489,8 +477,84 @@ input[type=number]::-webkit-inner-spin-button {
     .percent-div{
         flex: 0 0 12%;
     }
-    
+}
 
-
-
+@media (max-width:810px)
+{
+    .age-lb{
+        margin-left: 0px !important;
+    }
+    .lb-input{
+        margin-left: 0px !important;
+    }
+    #tool-bone .radios_label {
+        padding: 0;
+        margin: 0px 25px !important;
+    }
+    .row{
+        display: block !important;
+    }
+    .col-8{
+        width: 91.66666667% !important; 
+    }
+    .col-3{
+        width: 35% !important;
+    }
+}
+@media (max-width:375px)
+{
+    .col-8{
+        width: 82.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
+@media (max-width:414px)
+{
+    .col-8{
+        width: 75.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
+@media (max-width:375px)
+{
+    .col-8{
+        width: 82.666667% !important;
+    }
+    .col-3{
+        width: 75% !important;
+    }
+    .btn-line{
+        padding: 10px !important;
+    }
+    .gr-center{
+        margin-left: 0 !important;
+    }
+    .interpret{
+        margin-left: 0 !important;
+        text-align: center;
+    }
 }

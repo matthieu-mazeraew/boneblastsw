@@ -52,7 +52,7 @@
     <div id="pricing" class="cards-1">
         <header class="ex-header bg-gray">
             <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
-                <h16 class="maintitle xl:ml-24">Please enter your information:</h16>
+                <h16 class="xl:ml-24">Your risk of fracture and interpretation</h16>
             </div> <!-- end of container -->
         </header> <!-- end of ex-header --> 
     </div>
@@ -72,28 +72,28 @@
           </div>
           <div class="name-input">
             <div class="form-group">
-              <h3 class="lb-input age-lb" style="margin-left: 205px;">Age</h3>
+              <h3 class="lb-input age-lb" style="margin-left: 175px;">Age</h3>
               <input class="predict-input" type="number" id="age" name="age" min="50" max="96">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <h3 class="lb-input" style="margin-left: 160px;">Gender</h3c>
+          <h3 class="lb-input" style="margin-left: 160px;">Gender</h3>
+            <input type="radio" id="wo" name="gender" value="wo" checked="true">
+          <label class="radios_label wo-lb" for="wo">
+            Female
+          </label>  
           <input type="radio" id="men" name="gender" value="men">
           <label class="radios_label" for="men">
             Male
-          </label>
-          <input type="radio" id="wo" name="gender" value="wo">
-          <label class="radios_label wo-lb" for="wo">
-            Female
-          </label>       
+          </label>     
         </div>
         <div class="form-group">
           <h3 class="lb-input">Height <small>(centimetres)</small></h3>
           <input class="predict-input predict-input-5" type="number" name="height" id="height">
         </div>
         <div class="form-group">
-          <h3 class="lb-input" style="margin-right: 35px;">Weight <small>(kilograms)</small></h3>
+          <h3 class="lb-input" style="margin-right: 27px;">Weight <small>(kilograms)</small></h3>
           <input class="predict-input predict-input-5" type="number" name="weight" id="weight">
         </div>
       </div>
@@ -108,7 +108,7 @@
         </select>
         </div>
         <div class="form-group">
-          <h3 class="lb-input" style="margin-left: 0px;">Number of falls <small>(over past 12 months)</small></h3>
+          <h3 class="lb-input" style="margin-left: 47px;">Number of falls <small>(over past 12 months)</small></h3>
           <select name="Fall-12" id="Fall-12" class="predict-input" style="width:12.75em;">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -117,19 +117,15 @@
         </select>
         </div>
         <div class="form-group">
-            <h3 class="lb-input" style="margin-left: 255px;">T-score</h3>
+            <h3 class="lb-input" style="margin-left: 333px;">T-score <div class="avatar" data-tooltip="T-score is the BMD value relative to normal young people (20-30 year olds) of the same sex and ethnicity.
+               This value is easily listed on your BMD report. You must enter the + or - in front of the value as shown."></div></h3>
             <input class="predict-input predict-input-5" type="number" autocomplete="off" name="T-score" id="T-score"
-            min="-5" max="4">
-            <p>
-              T-score is the BMD value relative to normal young people (20-30 year olds) of the same sex and ethnicity.
-              This value is easily listed on your BMD report.
-              You must enter the + or - in front of the value as shown.
-            </p>
+            min="-5" max="4" placeholder="-5 to 4">
           </div>
           <div class="form-group">
-            <h3 class="lb-input" style="margin-left: 100px;">Actual BMD <small>(g/cm<sup>2</sup>)</small></h3>
+            <h3 class="lb-input" style="margin-left: 230px;">Actual BMD <small>(g/cm<sup>2</sup>)</small></h3>
             <input class="predict-input predict-input-5" type="number" autocomplete="off" name="BMD" id="BMD" min="0"
-            max="10">
+            max="10" placeholder="0.1 to 2.0">
            <div class="form-group">
               <h3 class="lb-input">Densitometer</h3>
               <input type="radio" id="DXA_GE" name="Densitometer" value="DXA_GE" checked>
@@ -144,7 +140,7 @@
           </div>
       </div>
 
-      <div class="panel-light">
+      <div class="panel-light diseases">
         <div class="form-group">
           <h3>Have you been diagnosed with following diseases?</h3>
           <div class="" style="display: flex; justify-content: space-between;">
@@ -170,76 +166,38 @@
             </div>
             <div class="radios">
               <div class="radios-item">
-                <input type="radio" id="no1" name="Cardiovascular" value="no1">
-                <label class="radios_label" for="no1">
-                  No
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="radio" id="no2" name="cancer" value="no2">
-                <label class="radios_label" for="no2">
-                  No
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="radio" id="no3" name="Type_2_diabetes" value="no3">
-                <label class="radios_label" for="no3">
-                  No
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="radio" id="no4" name="Neuromuscular" value="no4">
-                <label class="radios_label" for="no4">
-                  No
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="radio" id="no5" name="Rheumatoid_arthritis" value="no5">
-                <label class="radios_label" for="no5">
-                  No
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="radio" id="no6" name="COPD" value="no6">
-                <label class="radios_label" for="no6">
-                  No
-                </label>
-              </div>
-            </div>
-            <div class="radios">
-              <div class="radios-item">
-                <input type="radio" id="yes1" name="Cardiovascular" value="yes1">
-                <label class="radios_label" for="yes1">
+                <input type="checkbox" id="yes1" name="Cardiovascular" value="yes1">
+                <label class="radios_label form-checkbox-input" for="yes1">
                   Yes
                 </label>
               </div>
               <div class="radios-item">
-                <input type="radio" id="yes2" name="cancer" value="yes2">
-                <label class="radios_label" for="yes2">
+                <input type="checkbox" id="yes2" name="cancer" value="yes2" class="form-checkbox-input">
+                <label class="radios_label form-checkbox-input" for="yes2">
                   Yes
                 </label>
               </div>
               <div class="radios-item">
-                <input type="radio" id="yes3" name="Type_2_diabetes" value="yes3">
-                <label class="radios_label" for="yes3">
+                <input type="checkbox" id="yes3" name="Type_2_diabetes" value="yes3" class="form-checkbox-input">
+                <label class="radios_label form-checkbox-input" for="yes3">
                   Yes
                 </label>
               </div>
               <div class="radios-item">
-                <input type="radio" id="yes4" name="Neuromuscular" value="yes4">
-                <label class="radios_label" for="yes4">
+                <input type="checkbox" id="yes4" name="Neuromuscular" value="yes4" class="form-checkbox-input">
+                <label class="radios_label form-checkbox-input" for="yes4">
                   Yes
                 </label>
               </div>
               <div class="radios-item">
-                <input type="radio" id="yes5" name="Rheumatoid_arthritis" value="yes5">
-                <label class="radios_label" for="yes5">
+                <input type="checkbox" id="yes5" name="Rheumatoid_arthritis" value="yes5" class="form-checkbox-input">
+                <label class="radios_label form-checkbox-input" for="yes5">
                   Yes
                 </label>
               </div>
               <div class="radios-item">
-                <input type="radio" id="yes6" name="COPD" value="yes6">
-                <label class="radios_label" for="yes6">
+                <input type="checkbox" id="yes6" name="COPD" value="yes6" class="form-checkbox-input">
+                <label class="radios_label form-checkbox-input" for="yes6">
                   Yes
                 </label>
               </div>
@@ -284,7 +242,7 @@
                   Please check the weight number, it must be from 10 to 150.
                 </li>
                 <li id="T-scr-or-bmd">
-                  Please fill the T-score OR actual BMD.
+                  Please fill the T-score OR actual BMD
                 </li>
               </ul>
             </div>
@@ -298,13 +256,13 @@
       <div id="first-chart" class="panel-light hidden">
         <div id="tm-gallery-page-vạch" class="tm-gallery-page hidden">
           <div class="chart4">
-            <!--<p>Your risk Fracture and Interpretation:</p>-->
+            <!-- <p>Your risk Fracture and Interpretation:</p> -->
             <div class="first-chart">
               <span class="row-title">
                 Your 5-year risk of any fracture
               </span>
               <div class="row">
-                <div class="col-3 percent col-3-w">
+                <div class="col-4 percent col-3-w">
                   <span id="num-percent"></span>
                 </div>
                 <div class="col-8 per-chart" id="chartContainer4">
@@ -314,7 +272,7 @@
             <div class="second-chart">
   
               <div class="row">
-                <div class="col-3 percent col-3-w">
+                <div class="col-4 percent col-3-w">
                   <span id="num-percent2"></span>
                 </div>
                 <div class="col-8 per-chart" id="chartContainer4_2"></div>
@@ -325,7 +283,7 @@
                 Your 5-year risk of hip fracture
               </span>
               <div class="row">
-                <div class="col-3 percent col-3-w">
+                <div class="col-4 percent col-3-w">
                   <span id="num-percent3"></span>
                 </div>
                 <div class="col-8 per-chart" id="chartContainer4_3"></div>
@@ -333,7 +291,7 @@
             </div>
             <div class="fourth-chart">
               <div class="row">
-                <div class="col-3 percent col-3-w">
+                <div class="col-4 percent col-3-w">
                   <span id="num-percent4"></span>
                 </div>
                 <div class="col-8 per-chart" id="chartContainer4_4"></div>
@@ -358,9 +316,9 @@
               <span class="any-frac">Your 5-year risk of any fracture: <span id="any-percent"></span></span>
               <br>
               <span class="dtl-frac">
-                Among 100 men/women of your age, (?) will suffer a fracture in the next 5 years,and <span id="not-any-number"></span> will not. 
+                Among 100 <span id = "men-women1"></span> of your age, (?) will suffer a fracture in the next 5 years,and <span id="not-any-number"></span> will not. 
                 <br>
-                Among 100 men/women <em>like</em> you, <span id="any-number"></span> will suffer a fracture in the next 5 years,
+                Among 100 <span id = "men-women1"></span> like you, <span id="any-number"></span> will suffer a fracture in the next 5 years,
                 and <span id="not-any-number"></span> will not.
               </span>
               </span>
@@ -370,6 +328,7 @@
   
               </div>
             </div>
+            <span>If you will sustain a fracture, your risk of subsequent fracture is </span>
           </div>
           
           <div class="">
@@ -377,9 +336,9 @@
               <span class="any-frac">Your 5-year risk of hip fracture: <span id="hip-percent"></span></span>
               <br>
               <span class="dtl-frac">
-                Among 100 men/women of your age(?), <span id="hip-number"></span> will suffer a hip fracture in the next 5 years, and <span id="not-hip-number"></span> will not.
+                Among 100 <span id = "men-women2"></span> of your age(?), <span id="hip-number"></span> will suffer a hip fracture in the next 5 years, and <span id="not-hip-number"></span> will not.
                 <br>
-                Among 100 men/women <em>like</em> you, <span id="hip-number"></span> will suffer a hip fracture in the next 5
+                Among 100 <span id = "men-women2"></span> like you, <span id="hip-number"></span> will suffer a hip fracture in the next 5
                 years, and <span id="not-hip-number"></span> will not.
               </span>
               </span>
@@ -389,7 +348,7 @@
           
               </div>
             </div>
-              [Optional Adding if meet required conditions:If you will sustain a fracture, your risk of subsequent fracture is {?} %.]
+            <span>If you will sustain a fracture, your risk of subsequent fracture is </span>
           </div>
   
         </div>
@@ -522,7 +481,7 @@
                   <div class="second-chart">
         
                     <div class="row">
-                      <div class="col-3 percent col-3-w">
+                      <div class="col-4 percent col-3-w">
                         <span id="print-num-percent2"></span>
                       </div>
                       <div class="col-8 per-chart" id="print-chartContainer4_2"></div>
@@ -541,7 +500,7 @@
                   </div>
                   <div class="fourth-chart">
                     <div class="row">
-                      <div class="col-3 percent col-3-w">
+                      <div class="col-4 percent col-3-w">
                         <span id="print-num-percent4"></span>
                       </div>
                       <div class="col-8 per-chart" id="print-chartContainer4_4"></div>
@@ -565,7 +524,7 @@
                 <br>
                 <span class="dtl-frac">
                   [Adding:Among 100 men/women of your age, (?) will suffer a fracture in the next 5 years, and (?) will not.]
-                  Among 100 men/women <em>like</em> you, <span id="print-any-number"></span> will suffer a fracture in the next 5 years,
+                  Among 100 <span id = "men-women3"></span> like you, <span id="print-any-number"></span> will suffer a fracture in the next 5 years,
                   and <span id="print-not-any-number"></span> will not.
                 </span>
                 </span>
@@ -582,7 +541,7 @@
                 <br>
                 <span class="dtl-frac">
                   [Adding:Among 100 men/women of your age, (?) will suffer a hip fracture in the next 5 years, and (?) will not.]
-                  Among 100 men/women <em>like</em> you, <span id="print-hip-number"></span> will suffer a hip fracture in the next 5
+                  Among 100 <span id = "men-women4"></span> like you, <span id="print-hip-number"></span> will suffer a hip fracture in the next 5
                   years, and <span id="print-not-hip-number"></span> will not.
                 </span>
                 </span>
@@ -686,14 +645,29 @@
           document.getElementById("print-fall").innerHTML = fall;
           document.getElementById("print-BMD").innerHTML = actual;
 
-
-          $(".maintitle").text('Your fracture risk and interpretation:');
-
           var ele = document.getElementsByName('gender');     
             for(i = 0; i < ele.length; i++) {
                 if(ele[i].checked)
                 var gender = ele[i].value;
             }
+
+            if(gender == "wo")
+            {
+              document.getElementById("men-women1").innerHTML = 'Female';
+              document.getElementById("men-women2").innerHTML = 'Female';
+              document.getElementById("men-women3").innerHTML = 'Female';
+              document.getElementById("men-women4").innerHTML = 'Female';
+              document.getElementById("print-gender").innerHTML = 'Female';
+            }
+            else
+            {
+              document.getElementById("men-women1").innerHTML = 'Male';
+              document.getElementById("men-women2").innerHTML = 'Male';
+              document.getElementById("men-women3").innerHTML = 'Male';
+              document.getElementById("men-women4").innerHTML = 'Male';
+              document.getElementById("print-gender").innerHTML = 'Male';
+            }
+
             var ele3 = document.getElementsByName('Densitometer');
               
             for(i = 0; i < ele3.length; i++) {
@@ -832,6 +806,7 @@
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
               document.getElementById("T-scr-err").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             // else if(age === "select" && yn == "wei" && wei == '')
             else if(age === '' && wei == '')
@@ -844,6 +819,7 @@
               document.getElementById("T-scr-err").classList.add("hidden");
               document.getElementById("check-err").classList.add("hidden");
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
            else if(age === '' || (age < 50 || age > 96 ))
             {    
@@ -855,6 +831,7 @@
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             // else if((tscore > 4 || tscore < -5) && actual == '' && yn == "bmd")
             else if((tscore > 4 || tscore < -5) && actual == '')
@@ -867,6 +844,7 @@
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
               document.getElementById("wei-err").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
               
             }
             // else if (tscore == '' && actual == '' && yn == "bmd")
@@ -880,6 +858,7 @@
               document.getElementById("T-scr-err").classList.add("hidden");
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             // else if(tscore != '' && actual != '' && yn == "bmd")
             else if(tscore != '' && actual != '')
@@ -892,6 +871,7 @@
               document.getElementById("T-scr-err").classList.add("hidden");
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             // else if ((actual > 2 || actual < 0.1) && tscore == '' && yn == "bmd")
             else if ((actual > 2 || actual < 0.1) && tscore == '')
@@ -904,6 +884,7 @@
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("T-scr-err").classList.add("hidden");
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             // else if((wei < 10 || wei > 150) && yn == "wei")
             else if((wei < 10 || wei > 150) && wei != '')
@@ -916,6 +897,7 @@
               document.getElementById("age-err").classList.add("hidden");
               document.getElementById("T-scr-err").classList.add("hidden");
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             else if(checkbox.checked == false)
             {
@@ -927,6 +909,7 @@
               document.getElementById("wei-err").classList.add("hidden");
               document.getElementById("T-scr-or-bmd").classList.add("hidden");
               document.getElementById("bmd-err").classList.add("hidden");
+              document.getElementById("Print-btn").classList.add("hidden");
             }
             else{
               $('.warning').addClass('hidden');
