@@ -52,7 +52,8 @@
     <div id="pricing" class="cards-1">
         <header class="ex-header bg-gray">
             <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
-                <h16 class="xl:ml-24">Your risk of fracture and interpretation</h16>
+              <h16 class="xl:ml-24 t">Please enter your information</h16>
+                <h16 class="xl:ml-24 hidden" id="title-result">Your risk of fracture and interpretation</h16>
             </div> <!-- end of container -->
         </header> <!-- end of ex-header --> 
     </div>
@@ -318,7 +319,7 @@
               <span class="dtl-frac">
                 Among 100 <span id = "men-women1"></span> of your age, (?) will suffer a fracture in the next 5 years,and <span id="not-any-number"></span> will not. 
                 <br>
-                Among 100 <span id = "men-women1"></span> like you, <span id="any-number"></span> will suffer a fracture in the next 5 years,
+                Among 100 <span id = "men-women1"></span> <i>like you</i>, <span id="any-number"></span> will suffer a fracture in the next 5 years,
                 and <span id="not-any-number"></span> will not.
               </span>
               </span>
@@ -328,7 +329,7 @@
   
               </div>
             </div>
-            <span>If you will sustain a fracture, your risk of subsequent fracture is </span>
+            <span style="font-size: 18px;">If you will sustain a fracture, your risk of subsequent fracture is </span>
           </div>
           
           <div class="">
@@ -338,7 +339,7 @@
               <span class="dtl-frac">
                 Among 100 <span id = "men-women2"></span> of your age(?), <span id="hip-number"></span> will suffer a hip fracture in the next 5 years, and <span id="not-hip-number"></span> will not.
                 <br>
-                Among 100 <span id = "men-women2"></span> like you, <span id="hip-number"></span> will suffer a hip fracture in the next 5
+                Among 100 <span id = "men-women2"></span> <i>like you</i>, <span id="hip-number"></span> will suffer a hip fracture in the next 5
                 years, and <span id="not-hip-number"></span> will not.
               </span>
               </span>
@@ -348,7 +349,7 @@
           
               </div>
             </div>
-            <span>If you will sustain a fracture, your risk of subsequent fracture is </span>
+            <span style="font-size: 18px;">If you will sustain a fracture, your risk of subsequent fracture is </span>
           </div>
   
         </div>
@@ -636,6 +637,7 @@
           var actual = document.getElementById("BMD").value;
 
 
+          document.getElementById("title-result").classList.remove("hidden");
           document.getElementById("print-age").innerHTML = age;
           document.getElementById("print-name").innerHTML = full_name;
           document.getElementById("print-Tscore").innerHTML = tscore;
