@@ -52,7 +52,7 @@
     <div id="pricing" class="cards-1">
         <header class="ex-header bg-gray">
             <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
-              <h16 class="xl:ml-24 t">Please enter your information</h16>
+              <h16 class="xl:ml-24 " id="first-title">Please enter your information</h16>
                 <h16 class="xl:ml-24 hidden" id="title-result">Your risk of fracture and interpretation</h16>
             </div> <!-- end of container -->
         </header> <!-- end of ex-header --> 
@@ -638,6 +638,8 @@
 
 
           document.getElementById("title-result").classList.remove("hidden");
+          document.getElementById("first-title").classList.add("hidden");
+
           document.getElementById("print-age").innerHTML = age;
           document.getElementById("print-name").innerHTML = full_name;
           document.getElementById("print-Tscore").innerHTML = tscore;
