@@ -53,6 +53,94 @@
 	  });
 	});
 
+
+	$(".card").bind('mouseover', function() {
+    var old_color = $(this).css("background-color");
+    $(this)[0].style.backgroundColor = 'transparent';
+
+    	//$(".card-title")[0].style.color = "#eb427e";
+		//$(".mb-4")[0].style.color = "#eb427e";
+		if($(".card").eq(0).is(':hover')) { 
+			$(".card-title")[0].style.color = "#eb427e";
+			$(".mb-4")[0].style.color = "#eb427e";
+		}
+
+    	$(".card").eq(0).on("mouseenter", function() {
+    	$(".card-title")[0].style.color = "#eb427e";
+		$(".mb-4")[0].style.color = "#eb427e";
+		//$(".card-title")[0].style.textShadow = "0 5px 15px rgba(145, 92, 182, .5)";
+
+		$(".card-title")[1].style.color = "black";
+		$(".mb-4")[1].style.color = "#6b747b";
+		$(".card-title")[2].style.color = "black";
+		$(".mb-4")[2].style.color = "#6b747b";
+		$(".card-title")[3].style.color = "black";
+		$(".mb-4")[3].style.color = "#6b747b";
+    	})
+    
+    	$(".card").eq(1).on("mouseenter", function() {
+    	$(".card-title")[1].style.color = "#eb427e";
+		$(".mb-4")[1].style.color = "#eb427e";
+
+		$(".card-title")[0].style.color = "black";
+		$(".mb-4")[0].style.color = "#6b747b";
+		$(".card-title")[2].style.color = "black";
+		$(".mb-4")[2].style.color = "#6b747b";
+		$(".card-title")[3].style.color = "black";
+		$(".mb-4")[3].style.color = "#6b747b";
+    	})
+
+    	$(".card").eq(2).on("mouseenter", function() {
+    	$(".card-title")[2].style.color = "#eb427e";
+		$(".mb-4")[2].style.color = "#eb427e";
+
+		$(".card-title")[1].style.color = "black";
+		$(".mb-4")[1].style.color = "#6b747b";
+		$(".card-title")[0].style.color = "black";
+		$(".mb-4")[0].style.color = "#6b747b";
+		$(".card-title")[3].style.color = "black";
+		$(".mb-4")[3].style.color = "#6b747b";
+    	})
+
+    	$(".card").eq(3).on("mouseenter", function() {
+    	$(".card-title")[3].style.color = "#eb427e";
+		$(".mb-4")[3].style.color = "#eb427e";
+
+		$(".card-title")[1].style.color = "black";
+		$(".mb-4")[1].style.color = "#6b747b";
+		$(".card-title")[2].style.color = "black";
+		$(".mb-4")[2].style.color = "#6b747b";
+		$(".card-title")[0].style.color = "black";
+		$(".mb-4")[0].style.color = "#6b747b";
+    	})
+
+    $(".card").bind('mouseout', function () {
+        $(this)[0].style.backgroundColor = old_color;
+        $(".card-title")[0].style.color = "black";
+        $(".mb-4")[0].style.color = "#6b747b";
+        
+    	});
+	});
+
+	//$(".card").bind('mouseover', function() {
+    //	$(".card-title")[0].style.color = "#eb427e";
+	//	$(".mb-4")[0].style.color = "#eb427e";
+	// $(".card").bind('mouseout', function () {
+    //    $(".card-title")[0].style.color = "black";
+    //    $(".mb-4")[0].style.color = "#6b747b";
+    //	});
+	//}); 
+
+	$(".card").eq(0).click(function(){
+		location.href = "ifract/index.html";}); 
+	$(".card").eq(1).click(function(){
+		location.href = "skeage/skeage.html";}); 
+	$(".card").eq(2).click(function(){
+		location.href = "bmd/index.html";});
+	$(".card").eq(3).click(function(){
+		location.href = "xbmd/index.html";});   	
+
+
     // hover in desktop mode
     function toggleDropdown (e) {
         const _d = $(e.target).closest('.dropdown'),
@@ -190,15 +278,15 @@
 	});
 
 	/* Checks page scroll offset and changes active link on page load */
-	changeActive();
+	/*changeActive();*/
 
-	/* Change active link on scroll */
+	/* Change active link on scroll 
 	$(document).scroll(function(){
 		changeActive();
-	});
+	});*/
 	
 	/* Function to change the active link */
-	function changeActive() {
+	/*function changeActive() {
 		const menuItems = getMenuItems();
 		$.each(menuItems, function(index, value){
 			var offsetSection = $('#' + value).offset().top;
@@ -210,7 +298,9 @@
 				$('.nav-link[href$="#'+value+'"]').addClass('active');
 			}  
 		});
-	}
+	}*/
+
+
 
 })(jQuery);
 

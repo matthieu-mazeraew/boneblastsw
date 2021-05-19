@@ -229,7 +229,7 @@ h1 {
 body,
 p {
     color: #6b747b;
-    font: 400 1rem/1.625rem "Open Sans", sans-serif;
+    font: 400 0.90rem/1.625rem "Open Sans", sans-serif;
 }
 
 h1 {
@@ -788,7 +788,30 @@ input[type="checkbox"] {
     border: none;
     border-radius: 16px;
     background-color: #f1f9fc;
+    border: 2px solid transparent;
 }
+
+.cards-1 .card:hover{
+    margin-bottom: 0.5rem;
+    padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+    /*border: 0.1px solid orange;
+    border-radius: 16px;
+    background-color: -webkit-linear-gradient(to right, #1c92d2, #f2fcfe);;;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    border-color: #eb427e;
+    border-radius: 32px;
+    border: 1px solid #eb427e;
+    background-color: #c1dae3;
+    background-position: right center;
+    text-decoration: green;
+    transform: scale(1);
+    color: #fff*/
+
+    border: 2px solid #eb427e;
+    border-radius: 16px;
+
+}
+
 
 .cards-1 .card-image {
     margin-bottom: 1.1rem;

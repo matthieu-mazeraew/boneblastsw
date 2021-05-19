@@ -16,6 +16,8 @@ html, body {
   margin: 0;
   background-color: url('https://digitshack.com/codepen/bmical/bg.png');
   background: url('https://raw.githubusercontent.com/Tommy-Ngx/BML_data/main/healthwallpaper4.png');
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
+  
   display: flex;
   justify-content: center;
   align-items: center; }
