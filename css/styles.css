@@ -792,9 +792,10 @@ input[type="checkbox"] {
 }
 
 .cards-1 .card:hover{
+    
+    /*border: 0.1px solid orange;
     margin-bottom: 0.5rem;
     padding: 0.125rem 0.5rem 0.125rem 0.5rem;
-    /*border: 0.1px solid orange;
     border-radius: 16px;
     background-color: -webkit-linear-gradient(to right, #1c92d2, #f2fcfe);;;
     background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
