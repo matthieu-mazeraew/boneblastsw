@@ -1096,9 +1096,17 @@ input[type="checkbox"] {
 /******************/
 .footer {
     padding-top: 3.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
     background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
     text-align: center;
+    padding: 3rem;
+
+
+    /*position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;*/
 }
 
 .footer a {
@@ -1222,6 +1230,7 @@ a:hover.back-to-top {
         margin-left: 0;
     }
 
+    
     /* end of general styles */
 
     /* Navigation */
@@ -1375,6 +1384,14 @@ a:hover.back-to-top {
 /* Min-width 1280px */
 @media (min-width: 1280px) {
     /* General Styles */
+    .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    }
+
     .h1-large {
         font-size: 3.125rem;
         line-height: 3.75rem;
