@@ -122,6 +122,61 @@
     	});
 	});
 
+	$(".card").bind('mouseover', function() {
+    var old_color = $(this).css("background-color");
+    $(this)[0].style.backgroundColor = 'transparent';
+
+    	//$(".card-title")[0].style.color = "#eb427e";
+		//$(".mb-4")[0].style.color = "#eb427e";
+		if($(".card").eq(1).is(':hover')) { 
+			$(".card-title")[1].style.color = "#eb427e";
+			$(".mb-4")[1].style.color = "#eb427e";
+		}
+	$(".card").bind('mouseout', function () {
+        $(this)[0].style.backgroundColor = "#f1f9fc";
+        $(".card-title")[1].style.color = "black";
+        $(".mb-4")[1].style.color = "#6b747b";
+        
+    	});
+	});
+
+	$(".card").bind('mouseover', function() {
+    var old_color = $(this).css("background-color");
+    $(this)[0].style.backgroundColor = 'transparent';
+
+    	//$(".card-title")[0].style.color = "#eb427e";
+		//$(".mb-4")[0].style.color = "#eb427e";
+		if($(".card").eq(2).is(':hover')) { 
+			$(".card-title")[2].style.color = "#eb427e";
+			$(".mb-4")[2].style.color = "#eb427e";
+		}
+	$(".card").bind('mouseout', function () {
+        $(this)[0].style.backgroundColor = "#f1f9fc";
+        $(".card-title")[2].style.color = "black";
+        $(".mb-4")[2].style.color = "#6b747b";
+        
+    	});
+	});
+
+	$(".card").bind('mouseover', function() {
+    var old_color = $(this).css("background-color");
+    $(this)[0].style.backgroundColor = 'transparent';
+
+    	//$(".card-title")[0].style.color = "#eb427e";
+		//$(".mb-4")[0].style.color = "#eb427e";
+		if($(".card").eq(3).is(':hover')) { 
+			$(".card-title")[3].style.color = "#eb427e";
+			$(".mb-4")[3].style.color = "#eb427e";
+		}
+	$(".card").bind('mouseout', function () {
+        $(this)[0].style.backgroundColor = "#f1f9fc";
+        $(".card-title")[3].style.color = "black";
+        $(".mb-4")[3].style.color = "#6b747b";
+        
+    	});
+	});
+
+		
 	//$(".card").bind('mouseover', function() {
     //	$(".card-title")[0].style.color = "#eb427e";
 	//	$(".mb-4")[0].style.color = "#eb427e";
