@@ -86,7 +86,10 @@ $(".calculateBtn").click(function(){
         }
         i=i+1
         if (typeof result_risk == 'undefined') {result_risk = risk_array[14]; i=15}
-        if (result_risk ==0) {result_risk = 0.01}
+        var min_risk = 1
+        if (result_risk ==0) {min_risk = 0.005;}
+        if (result_risk ==0) {result_risk = 0.01;}
+
 
         console.log(risk_array)
         console.log("year "+ (i));
@@ -96,23 +99,24 @@ $(".calculateBtn").click(function(){
 
     if(i>5){
         range = 'Underweight';
-        $(".resultRange").css("color","#32DC7C");
+        $(".resultRange").css("color","#245926");
         $(".suggestion").text("You have low risk. Enjoy your life！");
         document.getElementById("donut").style.setProperty("--fill", "#4CAF50");
     }else if(i<3){
         range = 'Overweight';
-        $(".resultRange").css("color","rgb(255, 180, 201)");
+        $(".resultRange").css("color","#9e0934");
         $(".suggestion").text("You have high risk. Be careful!");
         document.getElementById("donut").style.setProperty("--fill", "#ff054e");
     }else{
         range = 'Normal';
-        $(".resultRange").css("color","rgb(228, 255, 157)");
+        $(".resultRange").css("color","#7e8b24");
         $(".suggestion").text("You have a normal risk. Keep yourself healthy!");
         document.getElementById("donut").style.setProperty("--fill", "#c8dd32");
     }
 
     $(".resultRange").text(range);
     $(".resultRange").text("Risk: "+ Math.round(result_risk*100) + "%");
+    if (min_risk ==0.005) {$(".resultRange").text("Risk: "+ "<1" + "%")};
     
     Math.radians = function(degrees) {
     return degrees * Math.PI / 180;
