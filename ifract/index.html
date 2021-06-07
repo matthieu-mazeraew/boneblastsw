@@ -146,62 +146,42 @@
           <h3>Have you been diagnosed with following diseases?</h3>
           <div class="" style="display: flex; justify-content: space-between;">
             <div class="disea">
-              <p>
-                Cardiovascular disease
-              </p>
-              <p class="mtop-40">
+              <div class="mtop-20">
+                <input type="checkbox" name="Cardiovascular" id="Cardiovascular" class="disease">
+                <label>
+                  Cardiovascular disease
+                </label>
+              </div>
+            <div class="mtop-20">
+              <input type="checkbox" name="cancer" id="cancer" class="disease">
+              <label class="">
                 Cancer
-              </p>
-              <p class="mtop-40">
-                Type 2 diabetes
-              </p>
-              <p class="mtop-40">
-                Neuromuscular
-              </p>
-              <p class="mtop-40">
-                Rheumatoid arthritis
-              </p>
-              <p class="mtop-40">
-                Chronic obstructive pulmonary disease (COPD)
-              </p>
+              </label>
             </div>
-            <div class="radios">
-              <div class="radios-item">
-                <input type="checkbox" id="yes1" name="Cardiovascular" value="yes1">
-                <label class="radios_label form-checkbox-input" for="yes1">
-                  Yes
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="checkbox" id="yes2" name="cancer" value="yes2" class="form-checkbox-input">
-                <label class="radios_label form-checkbox-input" for="yes2">
-                  Yes
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="checkbox" id="yes3" name="Type_2_diabetes" value="yes3" class="form-checkbox-input">
-                <label class="radios_label form-checkbox-input" for="yes3">
-                  Yes
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="checkbox" id="yes4" name="Neuromuscular" value="yes4" class="form-checkbox-input">
-                <label class="radios_label form-checkbox-input" for="yes4">
-                  Yes
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="checkbox" id="yes5" name="Rheumatoid_arthritis" value="yes5" class="form-checkbox-input">
-                <label class="radios_label form-checkbox-input" for="yes5">
-                  Yes
-                </label>
-              </div>
-              <div class="radios-item">
-                <input type="checkbox" id="yes6" name="COPD" value="yes6" class="form-checkbox-input">
-                <label class="radios_label form-checkbox-input" for="yes6">
-                  Yes
-                </label>
-              </div>
+            <div class="mtop-20">
+              <input type="checkbox" name="Type_2_diabetes" id="Type_2_diabetes" class="disease">
+              <label class="">
+                Type 2 diabetes
+              </label>
+            </div>             
+            <div class="mtop-20">
+              <input type="checkbox" name="Neuromuscular" id="Neuromuscular" class="disease">
+              <label class="">
+                Neuromuscular
+              </label>
+            </div>
+            <div class="mtop-20">
+              <input type="checkbox" name="Rheumatoid_arthritis" id="Rheumatoid_arthritis" class="disease">
+              <label class="">
+                Rheumatoid arthritis
+              </label>
+            </div>
+            <div class="mtop-20">  
+              <input type="checkbox" name="COPD" id="COPD" class="disease">
+              <label class="">
+                Chronic obstructive pulmonary disease (COPD)
+              </label>
+            </div>
             </div>
           </div>
         </div>
@@ -636,6 +616,7 @@
           var checkbox = document.getElementById("disclaimer");
           var actual = document.getElementById("BMD").value;
 
+          console.log(checkbox.checked);
 
           document.getElementById("title-result").classList.remove("hidden");
           document.getElementById("first-title").classList.add("hidden");
@@ -695,89 +676,67 @@
               var tscore2 = ((actual-0.92)/0.133).toFixed(2);
             }
             
-            var disea1 = document.getElementsByName('Cardiovascular');
-            for(i = 0; i < disea1.length; i++) {
-                if(disea1[i].checked)
-                var disea1_1 = disea1[i].value;
-                if(disea1_1 == "yes1")
+            var disea1 = document.getElementById('Cardiovascular');
+            console.log(disea1.checked);      
+                if(disea1.checked == true)
                 {
-                  disea1_1 = "Cardiovascular";
+                  var disea1_1 = "Cardiovascular";
                 }
                 else
                 {
                   disea1_1 = "";
                 }
-            }
 
-            var disea2 = document.getElementsByName('cancer');
-            for(i = 0; i < disea2.length; i++) {
-                if(disea2[i].checked)
-                var disea2_2 = disea2[i].value;
-                if(disea2_2 == "yes2")
+            var disea2 = document.getElementById('cancer');          
+                if(disea2.checked)
                 {
-                  disea2_2 = "Cancer";
+                var disea2_2 = "Cancer";
                 }
                 else
                 {
                   disea2_2 = "";
                 }
-            }
+
             
-            var disea3 = document.getElementsByName('Type_2_diabetes');
-            for(i = 0; i < disea3.length; i++) {
-                if(disea3[i].checked)
-                var disea3_3 = disea3[i].value;
-                if(disea3_3 == "yes3")
-                {
-                  disea3_3 = "Type 2 diabetes";
+            var disea3 = document.getElementById('Type_2_diabetes');
+                if(disea3.checked){
+                var disea3_3 = "Type 2 diabetes";
                 }
                 else
                 {
                   disea3_3 = "";
                 }
-            }
 
-            var disea4 = document.getElementsByName('Neuromuscular');
-            for(i = 0; i < disea4.length; i++) {
-                if(disea4[i].checked)
-                var disea4_4 = disea4[i].value;
-                if(disea4_4 == "yes4")
+
+            var disea4 = document.getElementById('Neuromuscular');
+                if(disea4.checked)
                 {
-                  disea4_4 = "Neuromuscular";
+                 var disea4_4 = "Neuromuscular";
                 }
                 else
                 {
                   disea4_4 = "";
                 }
-            }
 
-            var disea5 = document.getElementsByName('Rheumatoid_arthritis');
-            for(i = 0; i < disea5.length; i++) {
-                if(disea5[i].checked)
-                var disea5_5 = disea5[i].value;
-                if(disea5_5 == "yes5")
+            var disea5 = document.getElementById('Rheumatoid_arthritis');
+                if(disea5.checked)
                 {
-                  disea5_5 = "Rheumatoid arthritis";
+                var disea5_5 = "Rheumatoid arthritis";
                 }
                 else
                 {
                   disea5_5 = "";
                 }
-            }
 
-            var disea6 = document.getElementsByName('COPD');
-            for(i = 0; i < disea6.length; i++) {
-                if(disea6[i].checked)
-                var disea6_6 = disea6[i].value;
-                if(disea6_6 == "yes6")
+            var disea6 = document.getElementById('COPD');
+                if(disea6.checked)              
                 {
-                  disea6_6 = "COPD";
+                 var disea6_6 = "COPD";
                 }
                 else
                 {
                   disea6_6 = "";
                 }
-            }
 
            let diseaArr = [disea1_1,disea2_2,disea3_3,disea4_4,disea5_5,disea6_6];
            document.getElementById("print-diseases").innerHTML = diseaArr.join('  ');

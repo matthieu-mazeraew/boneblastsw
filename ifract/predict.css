@@ -45,6 +45,9 @@ input[type=number]::-webkit-inner-spin-button {
 #tool-bone .mtop-40{
     margin-top: 42px;
 }
+#tool-bone .mtop-20{
+    margin-top: 22px;
+}
 .panel-light{
     background-color:#DFEDEE;
     color: #434241;
@@ -117,6 +120,11 @@ input[type=number]::-webkit-inner-spin-button {
     line-height: 2em;
     display: inline-block;
 }
+.mtop-20 .disease + label{
+    position: absolute;
+    left: 100px;
+}
+
 #tool-bone .radios_label {
     padding: 0;
     margin: 0 35px;
