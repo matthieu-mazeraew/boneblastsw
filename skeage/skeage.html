@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../ifract/test.css">
   <link rel="stylesheet" href="../ifract/bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
   <link rel="stylesheet" href="../ifract/fontawesome-free-5.15.2-web/css/all.css">
-  <script src="../ifract/scripts.js"></script>
+  <!--<script src="../ifract/scripts.js"></script>-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Bone Fracture Risk Calculator</title>
@@ -517,17 +517,19 @@
               $('.warning').addClass('hidden');
 
            var BMI = (wei/(Math.pow(height_m,2))).toFixed(1);
-           console.log(BMI);
+           console.log("BMI is: ",BMI);
            var coef = 0.257*CCI + 0.01*BMI + 0.4733*smoking + 0.8547*hip + 0.8592*pelvis + 0.6919*femur + 0.6295*vertebrae + 0.4243*humerus 
            + 0.4268*rib + 0.4305*clavicle + 0.4354*tibia + 0.1147*elbow + 0.1038*forearm + 0.214*knee + 0.1372*ankle - 0.0017*foot - 0.2031*hand + 0.2071*wirst;
-           console.log(coef);
+           console.log("COEF is", coef);
+
+           //coef =2.813;
            var skel_age = (Math.log(coef.toFixed(1))/Math.log(1.1)) ;
            var real_age = skel_age + parseInt(age);
 
-           //BMI = 25;
-           //CCI = 10;
+           //BMI = 20;
+           //CCI = 5;
            //age = 70;
-           //coef =3.29;
+           //coef =2.813;
            var qx = [2.059, 0.175, 0.204, 0.033, 0.064, 0.032, 0.096, 0.094, 0.000, 0.000, 0.000, 0.000, 0.060, 0.151, 0.153, 0.185, 0.369, 0.437, 0.589, 0.445, 0.577, 0.579, 0.317, 0.476, 0.441, 0.713, 0.895, 0.477, 0.543, 0.611, 0.507, 0.638, 0.572, 0.740, 0.849, 0.620, 0.840, 0.729, 0.960, 0.771, 0.906, 1.306, 1.020, 1.419, 1.055, 1.160, 1.448, 1.782, 1.712, 2.112, 1.873, 2.174, 2.949, 2.198, 2.617, 3.138, 4.276, 4.323, 4.333, 5.031, 5.880, 5.611, 6.368, 7.896, 7.888, 8.288, 11.187, 12.640, 12.769, 13.729, 15.648, 16.632,  18.592, 20.907, 24.536, 27.730, 28.554, 30.961, 36.073, 41.158, 47.602, 51.960, 61.761, 66.589, 78.630, 92.359, 100.496, 112.117, 128.829, 151.725, 162.987, 179.113, 204.320, 222.943, 235.269, 245.015, 294.884, 340.168, 345.695, 350.626, 364.807, 350.383, 338.862, 283.469, 550.671, 435.282, 1000.000];
 
            var Lx1 = qx.map(function(x) { return x * 1; }); 
@@ -555,7 +557,7 @@
            //console.log("truoc vong for:",Lx1);
            for (let x=1; x<106; x++){
               Lx1[x] = Lx1[x-1]*(1-(qx[x-1]* 1.00/1000));
-              Lx2[x] = Lx2[x-1]*(1-(qx[x-1]* coef/1000));
+              Lx2[x] = Lx2[x-1]*(1-(qx[x-1]* Math.exp(coef)/1000));
             };
 
            //console.log("sau vong lap for:", Lx1);
@@ -582,11 +584,14 @@
            console.log("ket qua lx2",lx1);
 
            for (let x=0; x<106; x++){
-              Tx1[x] = lx1.reduce((a, b) => a + b, 0);
-              Tx2[x] = lx2.reduce((a, b) => a + b, 0);
+              //Tx1[x] = lx1.reduce((a, b) => a + b, 0);
+              Tx1[x] = lx1.slice(x,106).reduce((a, b) => a + b, 0);           
+              //Tx2[x] = lx2.reduce((a, b) => a + b, 0);
+              Tx2[x] = lx2.slice(x,106).reduce((a, b) => a + b, 0);   
             };
 
-            console.log(Tx1);
+            console.log("ket qua Tx1",Tx1);
+            console.log("ket qua Tx2",Tx2);
 
             Ex1 = Tx1.map((a, i) => a/Lx1[i]);
             //Ex2 = Tx2 / Lx2
@@ -628,18 +633,19 @@
 
           var Skel_Age2 = Diff.map((a, i) => a + parseInt(age));
           for (let x=0; x<Skel_Age2.length; x++){
-              Skel_Age2[x] = Math.round(Skel_Age2[x] * 100) / 100
+              Skel_Age2[x] = Math.round(Skel_Age2[x] * 10) / 10
             };
 
-          var Skel_Age2_final = Skel_Age2[107- parseInt(age)];
+          //var Skel_Age2_final = Skel_Age2[107- parseInt(age)];
+          var Skel_Age2_final = Skel_Age2[parseInt(age)];
 
            console.log("Skel_Age2 ket qua:", Diff)
            console.log("Skel_Age2 ket qua:", Skel_Age2)
            console.log("Skel_Age2 ket qua:", Skel_Age2_final)
+           console.log("COEF is", coef," -- BMI is: ",BMI , "-- CCI is: ",CCI);
 
-
-           console.log(real_age);
-           document.getElementById("number-result").innerHTML = "Your Skeletal Age is: " + real_age.toFixed(0);
+           console.log("Theo công thức 1: ",real_age);
+           document.getElementById("number-result").innerHTML  = "Your Skeletal Age is: " + real_age.toFixed(0);
            document.getElementById("number-result2").innerHTML = "Theo công thức 2: " + Skel_Age2_final;
            document.getElementById("result-page").classList.remove("hidden");
            document.getElementById("bone-page-form").classList.add("hidden");
