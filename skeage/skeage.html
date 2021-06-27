@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../ifract/style.css">
   <link rel="stylesheet" href="../ifract/queries.css">
   <link rel="stylesheet" href="../ifract/test.css">
+  <link rel="stylesheet" href="../ifract/result.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
   <!--<link rel="stylesheet" href="../ifract/bootstrap-5.0.0-beta2-dist/css/bootstrap.css">-->
   <!--<link rel="stylesheet" href="../ifract/fontawesome-free-5.15.2-web/css/all.css">-->
   <!--<script src="../ifract/scripts.js"></script>-->
@@ -336,14 +338,49 @@
         Get your results
       </button>
     </div>
-    <div class="result-page" id="result-page">
-      <div id="first-chart" class="panel-light hidden">
-        <div id="number-result"></div>
-        <div id="number-result2"></div>
-      </div>      
+    <div class="profile-card hidden" id="result-page">
+			<div class="image-container">
+			<!--<a href="https://ibb.co/gbgOkL"><img src="https://preview.ibb.co/hG0us0/eu1.jpg" style="width: 100%" alt="eu1" border="0"></a>-->
         
-    <button onclick="window.print();" id="Print-btn" class="btn1 hidden">Print</button>
-    </div>
+	    <div class="title">
+	   	<h2 id="patient-name"></h2>
+			</div>	
+	  	</div>
+
+	   	<div class="main-container">
+			<p><i class="fa fa-align-right info"></i>BMI Index: <span id="BMI"></span></p>
+			<p><i class="fa fa-home info"></i>CCI Score: <span id="CCI-result"></span></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body Status: <span id="body-status"></span></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others:</p>
+			<hr>
+			<p><b><i class="fa fa-asterisk info">			
+			</i>Age Calculator</b></p>
+			
+			<p>Biological Age</p>
+			<div class="skill-bar">
+			<div class="progress-bar" id="age-bar" >
+			</div>
+		    </div>
+
+			<p>Skeletal Age - Method 1</p>
+			<div class="skill-bar">
+			<div class="progress-bar2" id="age-method1" >
+			</div>
+		   </div>
+
+			<p>Skeletal Age - Method 2</p>
+		  <div class="skill-bar">
+			<div class="progress-bar2" id="age-method2" >
+			</div>
+		  </div>
+        
+			 <!--<p>UI Design</p>
+		   <div class="skill-bar">
+		   <div class="progress-bar" style="width: 5%">5%
+		   </div>
+		   </div>-->
+	</div>
+	</div>
 
 </div>
 </div>
@@ -645,11 +682,39 @@
            console.log("COEF is", coef," -- BMI is: ",BMI , "-- CCI is: ",CCI);
 
            console.log("Theo công thức 1: ",real_age);
-           document.getElementById("number-result").innerHTML  = "Your Skeletal Age is: " + real_age.toFixed(0);
-           document.getElementById("number-result2").innerHTML = "Theo công thức 2: " + Skel_Age2_final;
+          //  document.getElementById("number-result").innerHTML  = "Your Skeletal Age is: " + real_age.toFixed(0);
+          //  document.getElementById("number-result2").innerHTML = "Theo công thức 2: " + Skel_Age2_final;
            document.getElementById("result-page").classList.remove("hidden");
+
+           var body = document.getElementById("body-status");
+           if(BMI < 18.5)
+           {
+             body.innerHTML = "Underweight";
+           }
+           else if(18.5 < BMI && BMI < 24.9)
+           {
+             body.innerHTML = "Healthy";
+           }
+           else if(25.0 < BMI && BMI < 29.9)
+           {
+             body.innerHTML = "Overweight";
+           }
+           else{
+             body.innerHTML = "Obese";
+           }
+           document.getElementById("patient-name").innerHTML = full_name;
+           document.getElementById("BMI").innerHTML = BMI;
+           document.getElementById("CCI-result").innerHTML = CCI;
            document.getElementById("bone-page-form").classList.add("hidden");
-           document.getElementById("first-chart").classList.remove("hidden");
+
+           document.getElementById("age-bar").style.width = age + "%";
+           document.getElementById("age-bar").innerHTML = age + " years old";
+
+           document.getElementById("age-method1").style.width = real_age.toFixed(0) + "%";
+           document.getElementById("age-method1").innerHTML = real_age.toFixed(0) + " years old";
+
+           document.getElementById("age-method2").style.width = Skel_Age2_final + "%";
+           document.getElementById("age-method2").innerHTML = Skel_Age2_final + " years old";
 
 
            function sumArray(mang){
