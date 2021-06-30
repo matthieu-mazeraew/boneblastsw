@@ -29,6 +29,9 @@ html, body {
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden; }
+.card{
+  box-shadow:  9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5)
+}
 
 .screen_1 {
   right: 0px; }
@@ -53,7 +56,8 @@ html, body {
 .blockInside {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.75);
-  padding: 17px 0px 5px 0px; }
+  padding: 17px 0px 5px 0px; 
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.3);}
 
 .resultRange {
   font-size: 18px;
@@ -129,7 +133,8 @@ html, body {
   margin: 10px auto;
   padding: 10px;
   border: solid 2px transparent; 
-  color: white; }
+  color: white; 
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.3);}
   .genderBlock:hover {
     border-color: rgba(142, 34, 246, 0.75);
     filter: brightness(130%)
@@ -154,7 +159,8 @@ html, body {
   border-radius: 5px;
   background-color: rgba(157, 124, 173, 0.4); /*rgba(255, 255, 255, 0.15) */
   margin: 10px auto;
-  padding: 10px; }
+  padding: 10px; 
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.3);}
   .heightBlock .heightInput, .tscoreBlock .tscoreInput , .tuoiBlock .tuoiInput  {
     background-color: transparent;
     font-size: 30px;
@@ -257,6 +263,7 @@ html, body {
   box-sizing: border-box;
   transform: rotate(calc( 1deg * ( -45 + var(--percentage) * 1.8 ) ));
   animation: fillAnimation 5s ease-in;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 
