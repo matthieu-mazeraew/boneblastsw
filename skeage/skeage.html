@@ -339,48 +339,49 @@
       </button>
     </div>
     <div class="profile-card hidden" id="result-page">
-			<div class="image-container">
-			<!--<a href="https://ibb.co/gbgOkL"><img src="https://preview.ibb.co/hG0us0/eu1.jpg" style="width: 100%" alt="eu1" border="0"></a>-->
+      <div class="image-container">
+      <!--<a href="https://ibb.co/gbgOkL"><img src="https://preview.ibb.co/hG0us0/eu1.jpg" style="width: 100%" alt="eu1" border="0"></a>-->
         
-	    <div class="title">
-	   	<h2 id="patient-name"></h2>
-			</div>	
-	  	</div>
+      <div class="title">
+      <h2 id="patient-name"> Patient Name</h2>
+      </div>  
+      </div>
 
-	   	<div class="main-container">
-			<p><i class="fa fa-align-right info"></i>BMI Index: <span id="BMI"></span></p>
-			<p><i class="fa fa-home info"></i>CCI Score: <span id="CCI-result"></span></p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body Status: <span id="body-status"></span></p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others:</p>
-			<hr>
-			<p><b><i class="fa fa-asterisk info">			
-			</i>Age Calculator</b></p>
-			
-			<p>Biological Age</p>
-			<div class="skill-bar">
-			<div class="progress-bar" id="age-bar" >
-			</div>
-		    </div>
+      <div class="main-container">
+      <!--<p><i class="fa fa-user-circle info"></i>Patient Name</p>-->
+      <p><i class="fa fa-align-right info"></i>BMI Index: <span id="BMI"></span></p>
+      <p><i class="fa fa-user-md info"></i>CCI Score: <span id="CCI-result"></span></p>
+      <p><i class="fa fa-user-md info"></i>Body Status: <span id="body-status"></span></p>
+      <p><i class="fa fa-user-md info"></i>Others:      <span id="others"></span></p></p>
+      <hr>
+      <p><b><i class="fa fa-asterisk info">     
+      </i>Age Calculator</b></p>
+      
+      <p>Biological Age</p>
+      <div class="skill-bar">
+      <div class="progress-bar" id="age-bar" >
+      </div>
+        </div>
 
-			<p>Skeletal Age - Method 1</p>
-			<div class="skill-bar">
-			<div class="progress-bar2" id="age-method1" >
-			</div>
-		   </div>
+      <p>Skeletal Age - Method 1</p>
+      <div class="skill-bar">
+      <div class="progress-bar2" id="age-method1" >
+      </div>
+       </div>
 
-			<p>Skeletal Age - Method 2</p>
-		  <div class="skill-bar">
-			<div class="progress-bar2" id="age-method2" >
-			</div>
-		  </div>
+      <p>Skeletal Age - Method 2</p>
+      <div class="skill-bar">
+      <div class="progress-bar2" id="age-method2" >
+      </div>
+      </div>
         
-			 <!--<p>UI Design</p>
-		   <div class="skill-bar">
-		   <div class="progress-bar" style="width: 5%">5%
-		   </div>
-		   </div>-->
-	</div>
-	</div>
+       <!--<p>UI Design</p>
+       <div class="skill-bar">
+       <div class="progress-bar" style="width: 5%">5%
+       </div>
+       </div>-->
+  </div>
+  </div>
 
 </div>
 </div>
@@ -634,6 +635,17 @@
             //Ex2 = Tx2 / Lx2
             Ex2 = Tx2.map((a, i) => a/Lx2[i]);
 
+            for (let x=0; x<106; x++){
+              if (Ex2[x] > Ex2[x-1]){
+                    Ex2[x] = Ex2[x-1];
+                };
+              if (Ex2[x] < 0){
+                    Ex2[x] = 0;
+                };
+
+            };
+
+
             console.log("ket qua Ex1:",Ex1);
 
             //Lx1 = [round(x,2) for x in Lx1];
@@ -674,7 +686,7 @@
             };
 
           //var Skel_Age2_final = Skel_Age2[107- parseInt(age)];
-          var Skel_Age2_final = Skel_Age2[parseInt(age)];
+          var Skel_Age2_final = Skel_Age2[parseInt(106-age)];
 
            console.log("Skel_Age2 ket qua:", Diff)
            console.log("Skel_Age2 ket qua:", Skel_Age2)
@@ -705,15 +717,20 @@
            document.getElementById("patient-name").innerHTML = full_name;
            document.getElementById("BMI").innerHTML = BMI;
            document.getElementById("CCI-result").innerHTML = CCI;
+           document.getElementById("others").innerHTML = coef;
            document.getElementById("bone-page-form").classList.add("hidden");
 
-           document.getElementById("age-bar").style.width = age + "%";
+           var real_age_show0 = age*0.8
+           var real_age_show1 = real_age*0.8
+           var real_age_show2 = Skel_Age2_final *0.8
+
+           document.getElementById("age-bar").style.width = real_age_show0.toFixed(0) + "%";
            document.getElementById("age-bar").innerHTML = age + " years old";
 
-           document.getElementById("age-method1").style.width = real_age.toFixed(0) + "%";
+           document.getElementById("age-method1").style.width = real_age_show1.toFixed(0) + "%";
            document.getElementById("age-method1").innerHTML = real_age.toFixed(0) + " years old";
 
-           document.getElementById("age-method2").style.width = Skel_Age2_final + "%";
+           document.getElementById("age-method2").style.width = real_age_show2.toFixed(0) + "%";
            document.getElementById("age-method2").innerHTML = Skel_Age2_final + " years old";
 
 
