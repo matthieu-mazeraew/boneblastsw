@@ -49,7 +49,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 22px;
 }
 .panel-light{
-    background-color:#DFEDEE;
+    background-color: #f0f1f2;
     color: #434241;
 }
 .bone-page-form{
@@ -192,9 +192,9 @@ input[type=number]::-webkit-inner-spin-button {
     top: -7px;
 }
 #tool-bone .btn1{
-    background-color: #FFE611;
+    background-color: #6613a4;
     font-family: Roboto,sans-serif;
-    color: #434241;
+    color: #f7f4f0;
     padding: 0.4em 1.4em 0.4em 1.4em;
     font-size: 1.5em;
     font-weight: 700;
@@ -202,13 +202,14 @@ input[type=number]::-webkit-inner-spin-button {
     min-width: 8em;
     margin: 0 auto 0 auto;
     text-align: center;
-    border-bottom: 0.125em #434241 solid;
+    border-bottom: 0.125em #f7f4f0 solid;
+    border-radius: 15px;
     cursor: pointer;
 }
 #tool-bone .btn1:not(.heartage-locked):hover, #tool-bone .btn1:not(.heartage-locked):focus {
-    background-color: #434241;
-    color: #FFE611;
-    border-bottom: 0.125em #FFE611 solid;
+    background-color: #f7f4f0;
+    color: #6613a4;
+    border-bottom: 0.125em #6613a4 solid;
 }
 .btn-line{
     padding: 30px !important;
