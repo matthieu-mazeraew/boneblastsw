@@ -315,9 +315,9 @@ h6 {
 .btn-solid-reg {
     display: inline-block;
     padding: 1.075rem 1.25rem 1.075rem 1.25rem;
-    border: 1px solid #594cda;
+    border: 1px solid #6613a4;
     border-radius: 32px;
-    background-color: #594cda;
+    background-color: #6613a4;
     color: #ffffff;
     font-weight: 600;
     font-size: 0.875rem;
@@ -327,9 +327,9 @@ h6 {
 }
 
 .btn-solid-reg:hover {
-    border: 1px solid #594cda;
+    border: 1px solid #6613a4;
     background-color: transparent;
-    color: #594cda; /* needs to stay here because of the color property of a tag */
+    color: #6613a4; /* needs to stay here because of the color property of a tag */
     text-decoration: none;
 }
 
