@@ -720,9 +720,9 @@
            document.getElementById("others").innerHTML = coef;
            document.getElementById("bone-page-form").classList.add("hidden");
 
-           var real_age_show0 = age*0.8
-           var real_age_show1 = real_age*0.8
-           var real_age_show2 = Skel_Age2_final *0.8
+           var real_age_show0 = age/Skel_Age2_final*90
+           var real_age_show1 = real_age/Skel_Age2_final*90
+           var real_age_show2 = Skel_Age2_final/Skel_Age2_final *90
 
            document.getElementById("age-bar").style.width = real_age_show0.toFixed(0) + "%";
            document.getElementById("age-bar").innerHTML = age + " years old";
