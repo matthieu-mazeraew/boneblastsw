@@ -83,11 +83,22 @@
           <h3 class="lb-input" style="margin-left: 160px;">Gender</h3>
             <input type="radio" id="wo" name="gender" value="wo" checked="true">
           <label class="radios_label wo-lb" for="wo">
-            Female
+            Woman
           </label>  
           <input type="radio" id="men" name="gender" value="men">
           <label class="radios_label" for="men">
-            Male
+            Men
+          </label>     
+        </div>
+        <div class="form-group">
+          <h3 class="lb-input" style="margin-left: 145px;">Smoking</h3>
+            <input type="radio" id="ysmoking" name="smoking" value="ysmoking" checked="true">
+          <label class="radios_label wo-lb" for="ysmoking">
+            Yes
+          </label>  
+          <input type="radio" id="nsmoking" name="smoking" value="nsmoking">
+          <label class="radios_label" for="nsmoking" style="margin-left: 68px;">
+            No
           </label>     
         </div>
         <div class="form-group">
@@ -98,15 +109,10 @@
           <h3 class="lb-input" style="margin-right: 27px;">Weight <small>(kilograms)</small></h3>
           <input class="predict-input predict-input-5" type="number" name="weight" id="weight">
         </div>
-        <div class="form-group">
-          <h3 class="lb-input" style="margin-left: 0px;">Charlson Comorbiditiy Index</h3>
-          <input class="predict-input predict-input-5" type="number" autocomplete="off" name="CCI" id="CCI"
-          min="0" max="10" placeholder="0 to 10">
-        </div>
       </div>
       <div class="panel-light diseases">
         <div class="form-group">
-          <h3>Have you been diagnosed with following diseases?</h3>
+          <h3>Charlson Comorbidity Index</h3>
           <div class="" style="display: flex; justify-content: space-between;">
             <div class="disea">
               <div class="mtop-20">
@@ -142,7 +148,7 @@
               <div class="mtop-20">
                 <input type="checkbox" name="Diabetes" id="Diabetes" class="disease">
                 <label class="">
-                  Moderate or severe liver disease
+                  Diabetes with chronic complications
                 </label>
               </div>
               <div class="mtop-20">
@@ -166,7 +172,7 @@
               <div class="mtop-20">
                 <input type="checkbox" name="Moderate" id="Moderate" class="disease">
                 <label class="">
-                  Diabetes with chronic complications
+                  Moderate or severe liver disease
                 </label>
               </div>
               <div class="mtop-20">
@@ -178,7 +184,7 @@
               <div class="mtop-20">
                 <input type="checkbox" name="AIDS" id="AIDS" class="disease">
                 <label class="">
-                  Acquired Immunodeficiency Syndrome(AIDS/HIV)
+                  AIDS/HIV
                 </label>
               </div>        
             </div>
@@ -188,15 +194,9 @@
 
       <div class="panel-light diseases">
         <div class="form-group">
-          <h3>Have you been diagnosed a bone fracture with following positions?</h3>
+          <h3>Fracture</h3>
           <div class="" style="display: flex; justify-content: space-between;">
             <div class="disea">
-              <div class="mtop-20">
-                <input type="checkbox" name="Smoking" id="Smoking" class="disease">
-                <label class="">
-                  Smoking
-                </label>
-              </div>
               <div class="mtop-20">
                 <input type="checkbox" name="Hip" id="Hip" class="disease">
                 <label class="">
@@ -339,49 +339,48 @@
       </button>
     </div>
     <div class="profile-card hidden" id="result-page">
-      <div class="image-container">
-      <!--<a href="https://ibb.co/gbgOkL"><img src="https://preview.ibb.co/hG0us0/eu1.jpg" style="width: 100%" alt="eu1" border="0"></a>-->
+			<div class="image-container">
+			<!--<a href="https://ibb.co/gbgOkL"><img src="https://preview.ibb.co/hG0us0/eu1.jpg" style="width: 100%" alt="eu1" border="0"></a>-->
         
-      <div class="title">
-      <h2 id="patient-name"> Patient Name</h2>
-      </div>  
-      </div>
+	    <div class="title">
+	   	<h2 id="patient-name"></h2>
+			</div>	
+	  	</div>
 
-      <div class="main-container">
-      <!--<p><i class="fa fa-user-circle info"></i>Patient Name</p>-->
-      <p><i class="fa fa-align-right info"></i>BMI Index&emsp;: <span id="BMI"></span></p>
-      <p><i class="fa fa-user-md info"> </i>CCI Score&emsp;: <span id="CCI-result"></span></p>
-      <p><i class="fa fa-user-md info">    </i>Body Status: <span id="body-status"></span></p>
-      <p><i class="fa fa-user-md info"></i>Others &emsp;&emsp;: <span id="others"></span></p></p>
-      <hr>
-      <p><b><i class="fa fa-asterisk info">     
-      </i>Age Calculator</b></p>
-      
-      <p>Biological Age</p>
-      <div class="skill-bar">
-      <div class="progress-bar" id="age-bar" >
-      </div>
-        </div>
+	   	<div class="main-container">
+			<p><i class="fa fa-align-right info"></i>BMI Index: <span id="BMI"></span></p>
+			<p><i class="fa fa-home info"></i>CCI Score: <span id="CCI-result"></span></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body Status: <span id="body-status"></span></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others:</p>
+			<hr>
+			<p><b><i class="fa fa-asterisk info">			
+			</i>Age Calculator</b></p>
+			
+			<p>Biological Age</p>
+			<div class="skill-bar">
+			<div class="progress-bar" id="age-bar" >
+			</div>
+		    </div>
 
-      <p>Skeletal Age - Method 1</p>
-      <div class="skill-bar">
-      <div class="progress-bar2" id="age-method1" >
-      </div>
-       </div>
+			<p>Skeletal Age - Method 1</p>
+			<div class="skill-bar">
+			<div class="progress-bar2" id="age-method1" >
+			</div>
+		   </div>
 
-      <p>Skeletal Age - Method 2</p>
-      <div class="skill-bar">
-      <div class="progress-bar2" id="age-method2" >
-      </div>
-      </div>
+			<p>Skeletal Age - Method 2</p>
+		  <div class="skill-bar">
+			<div class="progress-bar2" id="age-method2" >
+			</div>
+		  </div>
         
-       <!--<p>UI Design</p>
-       <div class="skill-bar">
-       <div class="progress-bar" style="width: 5%">5%
-       </div>
-       </div>-->
-  </div>
-  </div>
+			 <!--<p>UI Design</p>
+		   <div class="skill-bar">
+		   <div class="progress-bar" style="width: 5%">5%
+		   </div>
+		   </div>-->
+	</div>
+	</div>
 
 </div>
 </div>
@@ -418,13 +417,17 @@
 
       var full_name  = document.getElementById("name").value;
       var age = document.getElementById("age").value;
-          var CCI = document.getElementById("CCI").value;
+         
           var wei = document.getElementById("weight").value;
           var height = document.getElementById("height").value;
           var checkbox = document.getElementById("disclaimer");
 
-          var Smoking = document.getElementById("Smoking");
-               if(Smoking.checked)
+          var ele2 = document.getElementsByName("smoking");  
+            for(i = 0; i < ele2.length; i++) {
+                if(ele2[i].checked)
+                var smoking1 = ele2[i].value;
+            }         
+               if(smoking1 == 'ysmoking')
                {
                  var smoking = 1;
                }
@@ -521,6 +524,70 @@
 
           var testArr = [smoking, hip, pelvis, femur, vertebrae, humerus, clavicle, tibia, elbow, forearm,
         knee, ankle, foot, hand, wirst];
+
+        var Conge = document.getElementById("Congestive");
+               if(Conge.checked)
+               var congestive = 2;
+               else
+               congestive = 0;
+        var Dement = document.getElementById("Dementia");
+               if(Dement.checked)
+               var dementia = 2;
+               else
+               dementia = 0;
+        var Chron = document.getElementById("Chronic");
+               if(Chron.checked)
+               var chronic = 1;
+               else
+               chronic = 0;
+        var Rheuma = document.getElementById("Rheumatologic");
+               if(Rheuma.checked)
+               var rheumatologic = 1
+               else
+               rheumatologic = 0;
+        var Mil = document.getElementById("Mild");
+               if(Mil.checked)
+               var mild = 2;
+               else
+               mild = 0;
+        var Diabe = document.getElementById("Diabetes");
+               if(Diabe.checked)
+               var diabetes = 1;
+               else
+               diabetes = 0;
+        var Hemipl = document.getElementById("Hemiplegia");
+               if(Hemipl.checked)
+               var hemiplegia = 2;
+               else
+               hemiplegia = 0;
+        var Rena = document.getElementById("Renal");
+               if(Rena.checked)
+               var renal = 1
+               else
+               renal = 0;
+        var Any_mali = document.getElementById("Any_malignancy");
+               if(Any_mali.checked)
+               var any_malignancy = 2;
+               else
+               any_malignancy = 0;
+        var Moder = document.getElementById("Moderate");
+               if(Moder.checked)
+               var moderate = 4;
+               else
+               moderate = 0;
+        var Metasta = document.getElementById("Metastatic");
+               if(Metasta.checked)
+               var metastatic = 6;
+               else
+               metastatic = 0;
+        var HIV = document.getElementById("AIDS");
+               if(HIV.checked)
+               var AIDS = 4;
+               else
+               AIDS = 0;
+        
+        var CCI = congestive + dementia + chronic + rheumatologic + mild + diabetes + hemiplegia + renal + any_malignancy 
+        + moderate + metastatic + AIDS;
 
         console.log(testArr);
           console.log(hip);
@@ -635,17 +702,6 @@
             //Ex2 = Tx2 / Lx2
             Ex2 = Tx2.map((a, i) => a/Lx2[i]);
 
-            for (let x=0; x<106; x++){
-              if (Ex2[x] > Ex2[x-1]){
-                    Ex2[x] = Ex2[x-1];
-                };
-              if (Ex2[x] < 0){
-                    Ex2[x] = 0;
-                };
-
-            };
-
-
             console.log("ket qua Ex1:",Ex1);
 
             //Lx1 = [round(x,2) for x in Lx1];
@@ -686,7 +742,7 @@
             };
 
           //var Skel_Age2_final = Skel_Age2[107- parseInt(age)];
-          var Skel_Age2_final = Skel_Age2[parseInt(106-age)];
+          var Skel_Age2_final = Skel_Age2[parseInt(age)];
 
            console.log("Skel_Age2 ket qua:", Diff)
            console.log("Skel_Age2 ket qua:", Skel_Age2)
@@ -717,21 +773,15 @@
            document.getElementById("patient-name").innerHTML = full_name;
            document.getElementById("BMI").innerHTML = BMI;
            document.getElementById("CCI-result").innerHTML = CCI;
-           document.getElementById("others").innerHTML = coef;
            document.getElementById("bone-page-form").classList.add("hidden");
 
-           var real_age_show0 = age/Skel_Age2_final*90
-           var real_age_show1 = real_age/Skel_Age2_final*90
-           var real_age_show2 = Skel_Age2_final/Skel_Age2_final *90
-
-           document.getElementById("age-bar").style.width = real_age_show0.toFixed(0) + "%";
+           document.getElementById("age-bar").style.width = age + "%";
            document.getElementById("age-bar").innerHTML = age + " years old";
-           document.getElementById("age-bar").style.backgroundColor = "#097008";
 
-           document.getElementById("age-method1").style.width = real_age_show1.toFixed(0) + "%";
+           document.getElementById("age-method1").style.width = real_age.toFixed(0) + "%";
            document.getElementById("age-method1").innerHTML = real_age.toFixed(0) + " years old";
 
-           document.getElementById("age-method2").style.width = real_age_show2.toFixed(0) + "%";
+           document.getElementById("age-method2").style.width = Skel_Age2_final + "%";
            document.getElementById("age-method2").innerHTML = Skel_Age2_final + " years old";
 
 
