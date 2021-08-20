@@ -808,6 +808,9 @@
           if (Skel_Age2_final < age) {
                 Skel_Age2_final = (real_age *95/100).toFixed(0) ;
             }
+          if (Skel_Age2_final === undefined) {
+                Skel_Age2_final = (real_age *95/100).toFixed(0) ;
+            }
 
            var maxage = Math.max(Skel_Age2_final,real_age)
            var real_age_show0 = age/maxage*90
